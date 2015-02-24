@@ -122,14 +122,50 @@ public class chapter1{
     
     // ----------given an image by N*N matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degress, and in place
     public static void question1_6(int[][] matrix){
+        // it asks to rotate the matrix, here we rotate as time order
+        int n=matrix.length;
+
+        for(int i=0; i<n/2; ++i){
+            for(int j=i; j<n-i-1;++j){
+                int tmp=matrix[i][j];
+                // top=left
+                matrix[i][j]=matrix[n-j-1][i];
+                //left=bottom
+                matrix[n-j-1][i]=matrix[n-i-1][n-j-1];
+                //bottom=right
+                matrix[n-i-1][n-j-1]=matrix[j][n-i-1];
+                //right=top
+                matrix[j][n-i-1]=tmp;
+            
+            }
         
+        }
         
     }
     
     // ----------write an algorithm such that if an element in an M*N matrix is 0, its entire row and column are set to 0
     public static void question1_7(int[][] matrix){
+        boolean []row=new boolean[matrix.length];
+        boolean []col=new boolean[matrix[0].length];
+        for(int i=0; i<matrix.length; ++i){
+            for(int j=0; j<matrix[0].length; ++j){
+                if(matrix[i][j]==0){
+                    row[i]=true;
+                    col[j]=true;
+                }
+            }
+        }
+        
+        for(int i=0; i<matrix.length; ++i){
+            for(int j=0; j<matrix[0].length; ++j){
+                if(row[i]||col[j]){
+                    matrix[i][j]=0;
+                }
+            }
+        }
     
-    
+        
+
     }
     // write code to check if s2 is a rotation of s1 using only one call to isSubstring();
     public static boolean question1_8(String s1, String s2){
@@ -142,6 +178,7 @@ public class chapter1{
             
     }
     public static boolean isSubstring(String s1, String s2) {
+        // java's str.contains() only checks if all characters in the origin ones, not necessarily
 		if(s1.length() < s2.length())
 			return false;
 		boolean isSub = false;
@@ -162,13 +199,27 @@ public class chapter1{
     public static void main(String[] args){
         String test1="adddb";
         String test2="dbabd";
+        int[][] matrix={
+        {1,2,3,4},
+        {5,6,7,8},
+        {9,10,11,12},
+        {13,14,15,16}};
+        
+        //question1_7(matrix);
         //boolean res=question1_1(test);
         //String res=question1_2(test);
         //boolean res=question1_3(test1,test2);
         //String res=question1_4(test1, 6);
         //String res=question1_5(test1);
-        boolean res=question1_8(test1,test2);
-        System.out.println(res);
+        //boolean res=question1_8(test1,test2);
+        question1_6(matrix);
+        for(int i=0; i<matrix.length; ++i){
+         for(int j=0; j<matrix[0].length; ++j){
+         System.out.print(matrix[i][j]+" ");
+         
+         }
+         }
+        System.out.println(matrix);
     }
 
 }
