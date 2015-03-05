@@ -7,7 +7,6 @@
 * One way to reduce the number of disk accesses is to **keep as many blocks as possible in main memory**. Since it is not possible to keep all blocks in main memory, we need to manage the allocation of the space available in main memory for the storage of blocks. The **buffer** is that part of main memory available for storage of copies of disk blocks. The subsystem responsible for the allocation of buffer space is called the buffer manager.
 
 ##### Questions
------------------
 ######Flash storage:
 a. How is the flash translation table, which is used to map logical page numbers to physical page numbers, created in memory?
 >It is stored as **an array containing physical page numbers, indexed by logical page numbers**. This representation gives an overhead equal to the size of the page address for each page.
@@ -39,33 +38,38 @@ b. LRU is preferable to MRU.
 
 ####Indexing and Hashing
 ============================
-*Many queries reference only a small proportion of the records in a file. To reduce the overhead in searching for these records, we can construct indices for the files that store the database.
+* Many queries reference only a small proportion of the records in a file. To reduce the overhead in searching for these records, we can construct indices for the files that store the database.
 ***Index-sequential files** are one of the oldest index schemes used in database systems. To permit fast **retrieval of records in search-key order**, records are stored sequentially, and out-of-order records are chained together. **To allow fast random access, we use an index** structure. There are two types of indices that we can use: dense indices and sparse indices. Dense indices contain entries for every search-key value, whereas sparse indices contain entries only for some search-key values.
-*The primary disadvantage of the index-sequential file organization is that **performance degrades as the file grows**. To overcome this deficiency, we can use a B+-tree index.
-*A B+-tree index takes the form of a balanced tree, in which **every path from the root of the tree to a leaf of the tree is of the same length**. The height of a B+-tree is proportional to the logarithm to the base N of the number of records in the relation, where each nonleaf node stores N pointers; the value of N is often around 50 or 100. B+-trees are much shorter than other balanced binary-tree structures such as AVL trees, and therefore require fewer disk accesses to locate records.
-*Lookup on B+-trees is straightforward and efficient. Insertion and deletion, however, are somewhat more complicated, but still efficient. The number of operations required for lookup, insertion, and deletion on B+-trees is **proportional to the logarithm to the base N** of the number of records in the relation, where each nonleaf node stores N pointers.
-*B-tree indices are similar to B+-tree indices.The primary advantage of a B-tree is that the B-tree *eliminates the redundant storage of search-key values*. The major disadvantages are overall complexity and *reduced fanout* for a given node size. System designers almost universally prefer B+-tree indices over B-tree indices in practice.
-*Sequential file organizations require an index structure to locate data. File organizations based on hashing, by contrast, allow us to find the address of a data item directly by computing a function on the search-key value of the desired record. Since we do not know at design time precisely which search- key values will be stored in the file, a good hash function to choose is one that assigns search-key values to buckets such that the distribution is both uniform and random.
-*Static hashing uses hash functions in which **the set of bucket addresses is fixed**. Such hash functions cannot easily accommodate databases that **grow significantly larger over time**. There are several dynamic hashing techniques that allow the hash function to be modified. One example is extendable hashing, which copes with changes in database size by splitting and coalescing buckets as the database grows and shrinks.
-*Ordered indices such as B+-trees and hash indices can be used for selections based on equality conditions involving single attributes. When multiple attributes are involved in a selection condition, we can *intersect record identifiers retrieved from multiple indices*.
+* The primary disadvantage of the index-sequential file organization is that **performance degrades as the file grows**. To overcome this deficiency, we can use a B+-tree index.
+* A B+-tree index takes the form of a balanced tree, in which **every path from the root of the tree to a leaf of the tree is of the same length**. The height of a B+-tree is proportional to the logarithm to the base N of the number of records in the relation, where each nonleaf node stores N pointers; the value of N is often around 50 or 100. B+-trees are much shorter than other balanced binary-tree structures such as AVL trees, and therefore require fewer disk accesses to locate records.
+* Lookup on B+-trees is straightforward and efficient. Insertion and deletion, however, are somewhat more complicated, but still efficient. The number of operations required for lookup, insertion, and deletion on B+-trees is **proportional to the logarithm to the base N** of the number of records in the relation, where each nonleaf node stores N pointers.
+* B-tree indices are similar to B+-tree indices.The primary advantage of a B-tree is that the B-tree *eliminates the redundant storage of search-key values*. The major disadvantages are overall complexity and *reduced fanout* for a given node size. System designers almost universally prefer B+-tree indices over B-tree indices in practice.
+* Sequential file organizations require an index structure to locate data. File organizations based on hashing, by contrast, allow us to find the address of a data item directly by computing a function on the search-key value of the desired record. Since we do not know at design time precisely which search- key values will be stored in the file, a good hash function to choose is one that assigns search-key values to buckets such that the distribution is both uniform and random.
+* Static hashing uses hash functions in which **the set of bucket addresses is fixed**. Such hash functions cannot easily accommodate databases that **grow significantly larger over time**. There are several dynamic hashing techniques that allow the hash function to be modified. One example is extendable hashing, which copes with changes in database size by splitting and coalescing buckets as the database grows and shrinks.
+* Ordered indices such as B+-trees and hash indices can be used for selections based on equality conditions involving single attributes. When multiple attributes are involved in a selection condition, we can *intersect record identifiers retrieved from multiple indices*.
 * **Bitmap indices** provide a very compact representation for indexing attributes with very few distinct values. Intersection operations are extremely fast on bitmaps, making them ideal for supporting queries on multiple attributes.
 
 #####Questions
------------------
 ######Indices speed query processing, but it is usually a bad idea to create indices on every attribute, and every combinations of attributes, that is a potential search keys. Explain why.
 >
-*Every index requires additional CPU time and disk I/O overhead during inserts and deletions.
-*Indices on non-primary keys might have to be changed on updates, although an index on the primary key might not (this is because updates typically do not modify the primary key attributes).
-*Each extra index requires additional storage space.
-*For queries which involve conditions on several search keys, efficiency might not be bad even if only some of the keys have indices on them. Therefore database performance is improved less by adding indices when many indices already exist.
+* Every index requires additional CPU time and disk I/O overhead during inserts and deletions.
+* Indices on non-primary keys might have to be changed on updates, although an index on the primary key might not (this is because updates typically do not modify the primary key attributes).
+* Each extra index requires additional storage space.
+* For queries which involve conditions on several search keys, efficiency might not be bad even if only some of the keys have indices on them. Therefore database performance is improved less by adding indices when many indices already exist.
 
 
 ####Query Processing
 ======================
+* The first action that the system must perform on a query is to translate the query into its internal form, which (for relational database systems) is usually based on the relational algebra. In the process of generating the internal form of the query, the parser checks the syntax of the user’s query, verifies that the relation names appearing in the query are names of relations in the database, and so on. If the query was expressed in terms of a view, the parser replaces all references to the view name with the relational-algebra expression to compute the view.
+* We can process simple selection operations by performing a linear scan, or by making use of indices. We can handle complex selections by computing unions and intersections of the results of simple selections.
+* We can sort relations larger than memory by the **external sort–merge** algorithm.
+* Queries involving a natural join may be processed in several ways,depending on the availability of indices and the form of physical storage for the relations.
+..* If the join result is almost as large as the Cartesian product of the two relations, a block nested-loop join strategy may be advantageous.
+..* If indices are available, the indexed nested-loop join can be used.
+..* If the relations are sorted, a merge join may be desirable. It may be advantageous to sort a relation prior to join computation (so as to allow use of the merge-join strategy).
+..* The hash-join algorithm partitions the relations into several pieces, such that each piece of one of the relations fits in memory. The partitioning is carried out with a hash function on the join attributes, so that corresponding pairs of partitions can be joined independently.
 
-
-
-
+* *Duplicate elimination, projection, set operations (union, intersection, and difference), and aggregation* can be done by sorting or by hashing. **Hashing and sorting are dual**, in the sense that any operation such as du- plicate elimination, projection, aggregation, join, and outer join that can be implemented by hashing can also be implemented by sorting, and vice versa; that is, any operation that can be implemented by sorting can also be imple- mented by hashing.
 
 
 
