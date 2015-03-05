@@ -30,10 +30,9 @@ Min heap
         }
     }
     PriorityQueue<String> pq= new PriorityQueue<String>(n, cmp);
-    while( in.hasNextInt() && count< n ){
+    while( in.hasNextInt() ){
         //
         pq.add(in.NextInt());
-        count++;
     }
 ```
 Java standard library appears to be a min Priority Queue, use  ```PriorityQueue<Integer> maxPQ = new PriorityQueue<Integer>(20,Collections.reverseOrder());``` to change to max
@@ -165,3 +164,23 @@ void LCA(TreeNode root, TreeNode n1, TreeNode n2){
 3  short term or long term ?
 
 4 use data from other stock prices, sectoral data, text, economic data, experts' predictions, etc
+
+###### How to find a duplicate element in an array of shuffled consecutive integers?
+
+Solution1:
+```
+Input: 1,2,3,2,4 => 12
+Expected: 1,2,3,4 => 10
+
+Input - Expected => 2
+```
+
+Solution2:
+```
+for (int i = 1; i < 1001; i++)
+{
+   array[i] = array[i] ^ array[i-1] ^ i;
+}
+
+printf("Answer : %d\n", array[1000]);
+```
