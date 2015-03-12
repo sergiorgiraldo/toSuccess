@@ -14,3 +14,16 @@ public class undirectedVertex{
     }
 
 }
+
+/*
+ Representation of Graphs:
+ 
+ 1 adjacency-list
+   -prefered for sparse grahs, those for which |E| < |V| ^2
+   
+ 
+ 2 adjacency-matrix
+   -dense
+   -need to tell quickly if there is an edge connecting two given vertices.
+ 
+ */
