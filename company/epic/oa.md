@@ -106,23 +106,27 @@ Goldbach's conjecture : Every even integer greater than 2 can be expressed as th
 Write a program for a word search. If thereis an NxN grid with one letter in each cell. Let the user enter a word and the letters of the word are said to be found in the grid either the letters match vertically, horizontally or diagonally in the grid. If the word is found, print the coordinates of the letters as output.
 
 10. Spiral Matrix
-Given a NXN matrix, starting from the upper right corner of the matrix start printingvalues in a counter-clockwise fashion.
+Given a NXN matrix, starting from the upper right corner of the matrix start printing values in a counter-clockwise fashion.
 E.g.: Consider N = 4
-Matrix= {a, b, c, d,
+Matrix= 
+{a, b, c, d,
 e, f, g, h,
 i, j, k, l,
 m, n, o, p}
 Your function should output: dcbaeimnoplhgfjk
 
 11. Largest Sum Sub Array
-Find thelargest sum contiguous sub array. The length of the returned sub array must beat least of length 2.
+Find the largest sum contiguous sub array. The length of the returned sub array must beat least of length 2.
+
 12. Advisered Average Number
-Write aprogram to display the advisered average for the list of numbers my omittingthe three largest number in the series.
-E.g:3,6,12,55,289,600,534,900,172. avg=(3+6+12+55+289+172) /6and eliminating534,900,600
+Write a program to display the advisered average for the list of numbers my omitting the three largest number in the series.
+E.g:3,6,12,55,289,600,534,900,172. avg=(3+6+12+55+289+172) /6 and eliminating 534,900,600
+
 13. Count And Say
 First,let user input a number, say 1. Then, the function will generate the next 10numbers which satisfy this condition:
 1, 11,21,1211,111221,312211...
 explanation: first number 1, second number is one 1, so 11. Third number is two1(previous number), so 21. next number one 2 one 1, so 1211 and so on...
+
 14. Valid Password
 In 1-9 keypad one key is not working. If someone enters a password then not working key will not be entered. You have givenexpected password and entered password. Check that entered password is valid ornot. Ex: entered 164, expected 18684 (you need to take care as when u enter18684 and 164 only both will be taken as 164 input)
 15. Verify Password
