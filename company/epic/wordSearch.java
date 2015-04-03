@@ -39,6 +39,8 @@ public class wordSearch{
        || helper(path, word, matrix, pos+1, r, c-1)
        || helper(path, word, matrix, pos+1, r+1, c+1)
        || helper(path, word, matrix, pos+1, r-1, c-1);
+        || helper(path, word, matrix, pos+1, r-1, c+1)
+        || helper(path, word, matrix, pos+1, r+1, c-1);
         if(!res){
             path.remove(path.size()-1);
             return false;

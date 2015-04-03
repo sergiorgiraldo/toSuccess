@@ -129,17 +129,20 @@ explanation: first number 1, second number is one 1, so 11. Third number is two1
 
 14. Valid Password
 In 1-9 keypad one key is not working. If someone enters a password then not working key will not be entered. You have givenexpected password and entered password. Check that entered password is valid ornot. Ex: entered 164, expected 18684 (you need to take care as when u enter18684 and 164 only both will be taken as 164 input)
+
 15. Verify Password
 Verify if the given password is valid/invalid
-1. must be 5-12 characters long . From 1point 3acres bbs
+1. must be 5-12 characters long . 
 2. must contain at least one number and one lowercase character
-3. a sequence must not be followed by the same sequence (like 123123qs isinvalid, 123qs123 is valid)
+3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid)
+
 16. Snake Sequence
-You are given a grid of numbers. A snakesequence is made up of adjacent numbers such that for each number, the numberon the right or the number below it is +1 or -1 its value. For example,
+You are given a grid of numbers. A snake sequence is made up of adjacent numbers such that for each number, the number on the right or the number below it is +1 or -1 its value. For example,
 1 3 2 6 8
--9 7 1 -1 2 . 
-1 5 0 1 9 . From 1point 3acres bbs
-In this grid, (3, 2, 1, 0, 1) is a snake sequence. Given a grid, find thelongest snake sequences and their lengths (so there can be multiple snakesequences with the maximum length).
+-9 7 1 -1 2 
+1 5 0 1 9 
+In this grid, (3, 2, 1, 0, 1) is a snake sequence. Given a grid, find the longest snake sequences and their lengths (so there can be multiple snake sequences with the maximum length).
+
 17. Mountain Point
 Given a M * N matrix, if the element in thematrix is larger than other 8 elements who stay around it, then named thatelement be mountain point. Print all the mountain points.
 18. Additive Number
