@@ -39,12 +39,12 @@ x*2 -1
 3
 
 12. You are working on an exam and the questionis smudged and you can’t see the question. Based on the answers only, what is the answer? (E)
-A) All of the below ( obiviours false )
-B) None of the below (if true, c is true)
-C) Some of the above ( if true, b is true, then c is true )
-D) One of the above ( if c true, b true, if b true, d false)
-E) None of the above ( so we reach here )
-F) None of the above (if true, e is false, the a-d will be true )
+-A) All of the below ( obiviours false )
+-B) None of the below (if true, c is true)
+-C) Some of the above ( if true, b is true, then c is true )
+-D) One of the above ( if c true, b true, if b true, d false)
+-E) None of the above ( so we reach here )
+-F) None of the above (if true, e is false, the a-d will be true )
 
 13. If a clock looses 2 seconds per day, how much time will it loose in 2 days ? (6sec) <--- may not be true
      True Time       This Clock
@@ -70,42 +70,50 @@ http://www.careercup.com/question?id=2104
 A number can be broken into different sub-sequence parts. Suppose a number 3245 can be broken into parts like 3 2 4 5 32 24 45 324 245. And this number is a colorful number, since product of every digit of a sub-sequence are different. That is, 3 2 4 5 (3*2)=6 (2*4)=8 (4*5)=20 (3*2*4)= 24 (2*4*5)= 40. But 326 is not acolorful number as it generates 3 2 6 (3*2)=6 (2*6)=12. You have to write a function that tells if the given number is a colorful number or not.
 
 2. Well-ordered String:
-You know a password is well-ordered string. Well-ordered string means that the order of the characters is in an alphabetical increasing order. Like “abEm” is a well-ordered number. However, “abmE” is not a well-order number. Given an input# that tells you also how many digits are in the password, print all possible well ordered passwords of numbers. Generate all well-ordered numbers given n digits
+You know a password is well-ordered string. Well-ordered string means that the order of the characters is in an alphabetical increasing order. Like “abEm” is a well-ordered number. However, “abmE” is not a well-order number. 
 
 3. Desirable Number
-A number is called ‘desirable’ if all thedigits are strictly ascending eg: 159 as 1<5<9. You know that your rivalhas a strictly numeric password that is 'desirable'. Your close ally has givenyou the number of digits (N) in your rival's password. WAP th\hjtat takes in'N' as input and prints out all possible 'desirable' numbers that can be formedwith N digits.
+A number is called ‘desirable’ if all the digits are strictly ascending eg: 159 as 1<5<9. You know that your rival has a strictly numeric password that is 'desirable'. Your close ally has given you the number of digits (N) in your rival's password. WAP that takes in 'N' as input and prints out all possible 'desirable' numbers that can be formed with N digits.
+
 4. Telephone Number
-Print all valid phone numbers of length nsubject to following constraints:
-If a number contains a 4, it should startwith 4
+Print all valid phone numbers of length n subject to following constraints:
+If a number contains a 4, it should start with 4
 No two consecutive digits can be same
-Three digits (e.g. 7,2,9) will be entirelydisallowed, take as input
+Three digits (e.g. 7,2,9) will be entirely dis allowed
+
 5. SMS
 You are given a telephone keyboard
 0-0, 1-1, 2-ABC2, 3-DEF3, 4-GHI4, 5-JKL5, 6-MNO6,7-PQRS7, 8-TUV8, 9-WXYZ9, *-space, #-char separater
-if you type "2", you will get 'A', that is "2"-'A', "22"-'B' ,"222"-'C', "2222"-'D'
+if you type "2", you will get 'A', that is "2"-'A', "22"-'B' ,"222"-'C', "2222"-'2'
 However, the digits can repeated many times
-"22222"-you get 'A' again . From 1point 3acres bbs
+"22222"-you get 'A' again . 
 You can use "#" to separate characters, for example
 "2#22", you get "AB"
 However, you may also have consecutive different digits without separator:"23"-'AD'. 
 If you type "*", it means space..
 You a given a sequence of digits, translate it into a text message
+
 6. Keypad Permutation
-Phone has letters on the number keys. forexample, number 2 has ABC on it, number 3 has DEF, 4 number has GHI,... , andnumber 9 has WXYZ. Write a program that will print out all of the possiblecombination of those letters depending on the input.
-7. Thestepping number:
-A number is called as a stepping number if the adjacent digits are having adifference of 1. For eg. 8,343,545 are stepping numbers. While 890, 098 arenot. The difference between a ‘9’ and ‘0’ should not be considered as1. Given start number(s) and an end number (e) your function should listout all the stepping numbers in the range including both the numbers s & e.
+Phone has letters on the number keys. for example, number 2 has ABC on it, number 3 has DEF, 4 number has GHI,... , andnumber 9 has WXYZ. Write a program that will print out all of the possible combination of those letters depending on the input.
+
+7. The stepping number:
+A number is called as a stepping number if the adjacent digits are having a difference of 1. For eg. 8,343,545 are stepping numbers. While 890, 098 are not. The difference between a ‘9’ and ‘0’ should not be considered as 1. Given start number(s) and an end number (e) your function should list out all the stepping numbers in the range including both the numbers s & e. 
+
 8. Two Primes
-Goldbach's conjecture : Every even integergreater than 2 can be expressed as the sum of two primes. Write a functionwhich takes a number as input, verify if is an even number greater than 2 andalso print at least one pair of prime numbers.
-9. FindingWords
-Write a program for a word search. If thereis an NxN grid with one letter in each cell. Let the user enter a word and theletters of the word are said to be found in the grid either the letters matchvertically, horizontally or diagonally in the grid. If the word is found, printthe coordinates of the letters as output.
+Goldbach's conjecture : Every even integer greater than 2 can be expressed as the sum of two primes. Write a functionwhich takes a number as input, verify if is an even number greater than 2 and also print at least one pair of prime numbers.
+
+9. Finding Words
+Write a program for a word search. If thereis an NxN grid with one letter in each cell. Let the user enter a word and the letters of the word are said to be found in the grid either the letters match vertically, horizontally or diagonally in the grid. If the word is found, print the coordinates of the letters as output.
+
 10. Spiral Matrix
-Given aNXN matrix, starting from the upper right corner of the matrix start printingvalues in a counter-clockwise fashion.
+Given a NXN matrix, starting from the upper right corner of the matrix start printingvalues in a counter-clockwise fashion.
 E.g.: Consider N = 4
 Matrix= {a, b, c, d,
 e, f, g, h,
 i, j, k, l,
 m, n, o, p}
 Your function should output: dcbaeimnoplhgfjk
+
 11. Largest Sum Sub Array
 Find thelargest sum contiguous sub array. The length of the returned sub array must beat least of length 2.
 12. Advisered Average Number
@@ -125,7 +133,7 @@ Verify if the given password is valid/invalid
 16. Snake Sequence
 You are given a grid of numbers. A snakesequence is made up of adjacent numbers such that for each number, the numberon the right or the number below it is +1 or -1 its value. For example,
 1 3 2 6 8
--9 7 1 -1 2 . 鍥磋鎴戜滑@1point 3 acres
+-9 7 1 -1 2 . 
 1 5 0 1 9 . From 1point 3acres bbs
 In this grid, (3, 2, 1, 0, 1) is a snake sequence. Given a grid, find thelongest snake sequences and their lengths (so there can be multiple snakesequences with the maximum length).
 17. Mountain Point
@@ -187,7 +195,7 @@ Thursday 2/21/2001
 Friday 2/22/2001
 Saturday 2/23/2002
 31. Seeds Number
-Find the seed of a number. . 鍥磋鎴戜滑@1point 3 acres
+Find the seed of a number. .
 Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seedfor a given number.
 32. Tic Tac Toe
 N*N matrix is given with input red or black.You can move horizontally, vertically or diagonally. If 3 consecutive samecolor found, that color will get 1 point. So if 4 red are vertically then pointis 2. Find the winner.
