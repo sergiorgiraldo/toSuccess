@@ -145,53 +145,66 @@ In this grid, (3, 2, 1, 0, 1) is a snake sequence. Given a grid, find the longes
 
 17. Mountain Point
 Given a M * N matrix, if the element in thematrix is larger than other 8 elements who stay around it, then named thatelement be mountain point. Print all the mountain points.
-18. Additive Number
+
+*18. Additive Number
 Anadditive sequence is 1,2,3,5,8,13 where T(n) = T(n -1) + T(n - 2). A numberrange is given to you. Find the additive sequence number in that range.
 Given the start and an ending integer as userinput, generate all integers with the following property.
+
 19. Fibbonaci Number
 There is one kind of numbers call FibbonaciNumber, which satisfy the following situation:
 A. can be spilt into several numbers;
 B. The first two number are the same, thenext number is equal to the sum of previous two
 eg. 112 (2 = 1 + 1), 12,122,436(12 + 12 = 24,12 + 24 = 36)
 If you are given a range by the user, findall numbers that are Fibbonaci numbers.
+
 20. Coin Change
-Somethingcost $10.25 and the customer pays with a $20 bill, the program will print outthe most efficient "change-breakdown" which is 1 five, 4 ones, and 3quarters. Find the minimum number of coins required to make change for a givensum (given unlimited cumber of N different denominations coin)
+Something cost $10.25 and the customer pays with a $20 bill, the program will print out the most efficient "change-breakdown" which is 1 five, 4 ones, and 3quarters. Find the minimum number of coins required to make change for a given sum (given unlimited cumber of N different denominations coin)
+
 21. Separate the number
-Print the sequences from the input given bythe user separated by semicolon
+Print the sequences from the input given by the user separated by semicolon
 e.g.: 4678912356012356
-output: 4;6789;123;56;0123;56;
+output: 4;6789;123;56;0123;56;(subsequence in alphabetical order)
+
 22. Find Max/Min Number
-Take a series of integers as input till azero is entered. Among these given integers, find the maximum of the oddnumbers and the minimum of the even integers (not including zero) and printthem.
+Take a series of integers as input till a zero is entered. Among these given integers, find the maximum of the odd numbers and the minimum of the even integers (not including zero) and print them.
+
 23. Swapping String
-Given two strings, you need to transpose thefirst string to the second string by means of only swaps between 2 consecutivecharacters in the first string. This must be performed by doing a series ofthese swaps in order to get the second string.
+Given two strings, you need to transpose the first string to the second string by means of only swaps between 2 consecutive characters in the first string. This must be performed by doing a series of these swaps in order to get the second string.
+
 24. Mingo
-A random generator (like a speakerstanding in a group housie game calls out a number) generates out any numberfrom 1 to 1000. There is a 10X10 matrix. A random generator assigns valuesto each block of this matrix(within 1 to 1000 obviously).
-Whenever, a row or a column or a diagonal is fully filled in this 10x10 fromthe numbers called out by the speaker, its called a 'Mingo'. Write aprogram that will find first Mingo, then second Mingo, then thirds Mingo...andso forth.
+A random generator (like a speakerstanding in a group housie game calls out a number) generates out any number from 1 to 1000. There is a 10X10 matrix. A random generator assigns values to each block of this matrix(within 1 to 1000 obviously).
+Whenever, a row or a column or a diagonal is fully filled in this 10x10 from the numbers called out by the speaker, its called a 'Mingo'. Write a program that will find first Mingo, then second Mingo, then thirds Mingo...and so forth.
+
 25. Matrix Position
 Given an NxN matrix with unique integers :Find and print positions of all numbers such that it is the biggest in its row andalso the smallest in its column . e.g. : In 3 x 3 with elements
 1 2 3
 4 5 6
 7 8 9
 the number is 3 and position (1,3)
+
 26. Replace String
 Froma given string, replace all instances of 'a' with 'one' and 'A' with 'ONE'.
 Example Input: " A boy is playing in a garden"
 Example Output: " ONE boy is playing in onegarden"
 -- Not that 'A' and 'a' are to be replaced only when theyare single characters, not as part of another word.
+
 27. Replace Words
 Given a string. Replace the words whose length>=4and is even, with a space between the two equal halves of the word. Consideronly alphabets for finding the evenness of the word
 I/P “A person can’t walk in this street”
 O/P “A per son ca n’t wa lk in th is str eet”
+
 28. Replace AEIOU
 Replace a,e,i,o,u with A,E,I,O,U.
 At most four eligible letters from the rearof the string are replaced.
 The first three eligible letters in thestring are always exempted from replacement.
+
 29. Security Keypad
 There is a security keypad at the entrance ofa building. It has 9 numbers 1 – 9 in a 3×3 matrix format.
 1 2 3
 4 5 6
 7 8 9 . from: 1point3acres.com/bbs
 The security has decided to allow one digit error for a person but that digitshould be horizontal or vertical. Example: for 5 the user is allowed to enter2, 4, 6, 8 or for 4 the user is allowed to enter 1, 5, 7. IF the security codeto enter is 1478 and if the user enters 1178 he should be allowed. Write afunction to take security code from the user and print out if he should beallowed or not.
+
 30. Calendar
 Get a date (mon/day/year) from user. Printexact the week of dates (Sun to Sat). ex) input: 2/20/2001 if the day isWednesday
 output: Sunday 2/17/2001
@@ -201,11 +214,14 @@ Wednesday 2/20/2001
 Thursday 2/21/2001
 Friday 2/22/2001
 Saturday 2/23/2002
+
 31. Seeds Number
 Find the seed of a number. .
 Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seedfor a given number.
+
 32. Tic Tac Toe
 N*N matrix is given with input red or black.You can move horizontally, vertically or diagonally. If 3 consecutive samecolor found, that color will get 1 point. So if 4 red are vertically then pointis 2. Find the winner.
+
 33. Fill a “magic square”matrix.
 A magic square of order n is an arrangement of thenumbers from 1 to n^2 in an n by n matrix with each number occurring exactlyonce so that each row, each column and each main diagonal has the same sum. Then should be an odd number. In the middle cell of the top row, fill number 1.Then go to above row and right column, and fill following number 2. If it’s outof boundary, go to the opposite row or column. If the next cell is alreadyoccupied, go to the cell below this cell and fill following number. An exampleof 5*5 grid is like this for the first 9 numbers:
 0 0 1 8 0
@@ -213,23 +229,32 @@ A magic square of order n is an arrangement of thenumbers from 1 to n^2 in an n 
 4 6 0 0 0
 0 0 0 0 3
 0 0 0 2 9
+
 34. Bull and Cows Game
 There’s a word guessing game. One personthink a word, and the other one guess a word, both words have the same length.The person should return the number of bulls and cows for the guessing. Bullsrepresent the number of same characters in the same spots, whereas cowsrepresent the number of characters guessed right but in the wrong spots. Writea program with two input strings, return the number of bulls and cows.
+
 35. Palindromes
 Print all palindromes of size greater than orequal to 3 of a given string. (How to do it with DP)?
+
 36. Unique Number
 Write, efficient code for extracting uniqueelements from a sorted list of array. e.g. (1, 1, 3, 3, 3, 5, 5, 5, 9, 9, 9, 9)-> (1, 3, 5, 9).
+
 37. Subtraction of two Arrays
 Suppose you want to do the subtraction of twonumbers. Each digit of the numbers is divided and put in an array. Like A=[1,2, 3, 4, 5], B=[4, 5, 3, 5]. You should output an array C=[7, 8, 1, 0].Remember that your machine can’t hand numbers larger than 20.
+
 38. Basketball Hit Rate
 The hit rate of the basketball game is givenby the number of hits divided by the number of chances. For example, youhave 73 chances but hit 15 times, then your hit rate is 15/73=0.205 (keep the last3 digits). On average, you have 4.5 chances in each basketball game. Assume thetotal number of games is 162. Write a function for a basketball player. Hewill input the number
 of hits he has made, the number of chances he had, and the number of remaininggames. The function should return the number of future hits, so that hecan refresh his hit rate to 0.45
+
 39. Clock Angle
 We are given a specific time(like 02:23), weneed to get the angle between hour and minute(less than 180)
+
 40. Jump Chess
 There’sa N*N board, two players join the jump game. The chess could go vertically andhorizontally. If the adjacent chess is opponent player’s and the spot besidethat is empty, then the chess could jump to that spot. One chess could not beenjumped twice. Given the position of the spot on the board, write the program tocount the longest length that chess could go.
+
 41. Decimal Number
 Let the user enter a decimal number. Therange allowed is 0.0001 to 0.9999. Only four decimal places are allowed. Theoutput should be an irreducible fraction. E.g.: If the user enters 0.35,the irreducible fraction will be 7/20.
+
 42. Continuous Alphabets
 Printcontinuous alphabets from a sequence of arbitrary alphabets . 
 For example:
@@ -237,16 +262,22 @@ Input: abcdefljdflsjflmnopflsjflasjftuvwxyz
 Output: abcdef; mnop; tuvwxyz
 Input: AbcDefljdflsjflmnopflsjflasjftuvWxYz 
 Output: abcdef; mnop; tuvwxyz
+
 43. Substring Addition
 Write a program to add the substring. eg :say you have alist {1 7 6 3 5 8 9 } and user is entering a sum 16. Output should display(2-4) that is {7 6 3} cause 7+6+3=16.
+
 44. Balanced String
 Given a string that has{},[],() and characters.Check if the string is balanced. E.g. {a[(b)]} is balanced. {a[(b])} isunbalanced.
+
 45. RGBCompare
 Given a string of RGB value (rr, gg, bb)which represents in hexadecimal. Compare if rr or gg or bb is the biggest, ortwo of those values are equal and larger than the third one, or three valuesare equal with each other.
+
 46. Edge Detection
 Two-dimensional array representation of animage can also be represented by a one-dimensional array of W*H size, where Wrepresent row and H represent column size and each cell represent pixel valueof that image. You are also given a threshold X. For edge detection, you haveto compute difference of a pixel value with each of it’s adjacent pixel andfind maximum of all differences. And finally compare if that maximum differenceis greater than threshold X. if so, then that pixel is a edge pixel and have todisplay it.
+
 47. Plus Equal Number
 Given a number find whether the digits in thenumber can be used to form an equation with + and ‘=’. That is if the number is123, we can have a equation of 1+2=3. But even the number 17512 also forms theequation 12+5=17.
+
 48. Octal and Decimal Palindrome
 
-The decimal and octal values of some numbersare both palindromes sometimes. Find such numbers within a given range.
+The decimal and octal values of some numbers are both palindromes sometimes. Find such numbers within a given range.
