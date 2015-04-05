@@ -254,10 +254,10 @@ We are given a specific time(like 02:23), we need to get the angle between hour 
 There’s a N*N board, two players join the jump game. The chess could go vertically and horizontally. If the adjacent chess is opponent player’s and the spot beside that is empty, then the chess could jump to that spot. One chess could not been jumped twice. Given the position of the spot on the board, write the program to count the longest length that chess could go.
 
 41. Decimal Number
-Let the user enter a decimal number. Therange allowed is 0.0001 to 0.9999. Only four decimal places are allowed. Theoutput should be an irreducible fraction. E.g.: If the user enters 0.35,the irreducible fraction will be 7/20.
+Let the user enter a decimal number. The range allowed is 0.0001 to 0.9999. Only four decimal places are allowed. The output should be an irreducible fraction. E.g.: If the user enters 0.35,the irreducible fraction will be 7/20.
 
 42. Continuous Alphabets
-Printcontinuous alphabets from a sequence of arbitrary alphabets . 
+Print continuous alphabets from a sequence of arbitrary alphabets . 
 For example:
 Input: abcdefljdflsjflmnopflsjflasjftuvwxyz
 Output: abcdef; mnop; tuvwxyz
@@ -268,16 +268,16 @@ Output: abcdef; mnop; tuvwxyz
 Write a program to add the substring. eg :say you have alist {1 7 6 3 5 8 9 } and user is entering a sum 16. Output should display(2-4) that is {7 6 3} cause 7+6+3=16.
 
 44. Balanced String
-Given a string that has{},[],() and characters.Check if the string is balanced. E.g. {a[(b)]} is balanced. {a[(b])} isunbalanced.
+Given a string that has{},[],() and characters. Check if the string is balanced. E.g. {a[(b)]} is balanced. {a[(b])} is unbalanced.
 
 45. RGBCompare
-Given a string of RGB value (rr, gg, bb)which represents in hexadecimal. Compare if rr or gg or bb is the biggest, ortwo of those values are equal and larger than the third one, or three valuesare equal with each other.
+Given a string of RGB value (rr, gg, bb)which represents in hexadecimal. Compare if rr or gg or bb is the biggest, or two of those values are equal and larger than the third one, or three values are equal with each other.
 
 46. Edge Detection
-Two-dimensional array representation of animage can also be represented by a one-dimensional array of W*H size, where Wrepresent row and H represent column size and each cell represent pixel valueof that image. You are also given a threshold X. For edge detection, you haveto compute difference of a pixel value with each of it’s adjacent pixel andfind maximum of all differences. And finally compare if that maximum differenceis greater than threshold X. if so, then that pixel is a edge pixel and have todisplay it.
+Two-dimensional array representation of an image can also be represented by a one-dimensional array of W*H size, where W represent row and H represent column size and each cell represent pixel value of that image. You are also given a threshold X. For edge detection, you have to compute difference of a pixel value with each of it’s adjacent pixel and find maximum of all differences. And finally compare if that maximum difference is greater than threshold X. if so, then that pixel is a edge pixel and have to display it.
 
 47. Plus Equal Number
-Given a number find whether the digits in thenumber can be used to form an equation with + and ‘=’. That is if the number is123, we can have a equation of 1+2=3. But even the number 17512 also forms theequation 12+5=17.
+Given a number find whether the digits in the number can be used to form an equation with + and ‘=’. That is if the number is 123, we can have a equation of 1+2=3. But even the number 17512 also forms the equation 12+5=17.
 
 48. Octal and Decimal Palindrome
 

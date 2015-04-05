@@ -9,7 +9,7 @@ import java.util.*;
 public class jumpChess{
     static int n=0;
     static int longestJump=0;
-    
+    // problems
     public static boolean canJump(int[][] matrix, int i, int j){
     	if(i<0 || j<0|| i>=n || j>=n || matrix[i][j]==1 )
     		return false;
