@@ -183,13 +183,13 @@ Given an NxN matrix with unique integers :Find and print positions of all number
 the number is 3 and position (1,3)
 
 26. Replace String
-Froma given string, replace all instances of 'a' with 'one' and 'A' with 'ONE'.
+From a given string, replace all instances of 'a' with 'one' and 'A' with 'ONE'.
 Example Input: " A boy is playing in a garden"
-Example Output: " ONE boy is playing in onegarden"
--- Not that 'A' and 'a' are to be replaced only when theyare single characters, not as part of another word.
+Example Output: " ONE boy is playing in one arden"
+-- Not that 'A' and 'a' are to be replaced only when they are single characters, not as part of another word.
 
 27. Replace Words
-Given a string. Replace the words whose length>=4and is even, with a space between the two equal halves of the word. Consideronly alphabets for finding the evenness of the word
+Given a string. Replace the words whose length>=4 and is even, with a space between the two equal halves of the word. Consideronly alphabets for finding the evenness of the word
 I/P “A person can’t walk in this street”
 O/P “A per son ca n’t wa lk in th is str eet”
 
@@ -199,15 +199,16 @@ At most four eligible letters from the rearof the string are replaced.
 The first three eligible letters in thestring are always exempted from replacement.
 
 29. Security Keypad
-There is a security keypad at the entrance ofa building. It has 9 numbers 1 – 9 in a 3×3 matrix format.
+There is a security keypad at the entrance of a building. It has 9 numbers 1 – 9 in a 3×3 matrix format.
 1 2 3
 4 5 6
-7 8 9 . from: 1point3acres.com/bbs
-The security has decided to allow one digit error for a person but that digitshould be horizontal or vertical. Example: for 5 the user is allowed to enter2, 4, 6, 8 or for 4 the user is allowed to enter 1, 5, 7. IF the security codeto enter is 1478 and if the user enters 1178 he should be allowed. Write afunction to take security code from the user and print out if he should beallowed or not.
+7 8 9 . 
+The security has decided to allow one digit error for a person but that digit should be horizontal or vertical. Example: for 5 the user is allowed to enter 2, 4, 6, 8,  or for 4 the user is allowed to enter 1, 5, 7. IF the security code to enter is 1478 and if the user enters 1178 he should be allowed. Write a function to take security code from the user and print out if he should be allowed or not.
 
 30. Calendar
-Get a date (mon/day/year) from user. Printexact the week of dates (Sun to Sat). ex) input: 2/20/2001 if the day isWednesday
-output: Sunday 2/17/2001
+Get a date (mon/day/year) from user. Print exact the week of dates (Sun to Sat). ex) input: 2/20/2001 if the day is Wednesday
+output: 
+Sunday 2/17/2001
 Monday 2/18/2001
 Tuesday 2/19/2001
 Wednesday 2/20/2001
@@ -217,13 +218,13 @@ Saturday 2/23/2002
 
 31. Seeds Number
 Find the seed of a number. .
-Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seedfor a given number.
+Eg : 1716 = 143*1*4*3 =1716 so 143 is the seed of 1716. find all possible seed for a given number.
 
 32. Tic Tac Toe
-N*N matrix is given with input red or black.You can move horizontally, vertically or diagonally. If 3 consecutive samecolor found, that color will get 1 point. So if 4 red are vertically then pointis 2. Find the winner.
+N*N matrix is given with input red or black.You can move horizontally, vertically or diagonally. If 3 consecutive same color found, that color will get 1 point. So if 4 red are vertically then pointis 2. Find the winner.
 
 33. Fill a “magic square”matrix.
-A magic square of order n is an arrangement of thenumbers from 1 to n^2 in an n by n matrix with each number occurring exactlyonce so that each row, each column and each main diagonal has the same sum. Then should be an odd number. In the middle cell of the top row, fill number 1.Then go to above row and right column, and fill following number 2. If it’s outof boundary, go to the opposite row or column. If the next cell is alreadyoccupied, go to the cell below this cell and fill following number. An exampleof 5*5 grid is like this for the first 9 numbers:
+A magic square of order n is an arrangement of the numbers from 1 to n^2 in an n by n matrix with each number occurring exactly once so that each row, each column and each main diagonal has the same sum. Then should be an odd number. In the middle cell of the top row, fill number 1.Then go to above row and right column, and fill following number 2. If it’s out of boundary, go to the opposite row or column. If the next cell is already occupied, go to the cell below this cell and fill following number. An exampleof 5*5 grid is like this for the first 9 numbers:
 0 0 1 8 0
 0 5 7 0 0
 4 6 0 0 0
@@ -231,26 +232,26 @@ A magic square of order n is an arrangement of thenumbers from 1 to n^2 in an n 
 0 0 0 2 9
 
 34. Bull and Cows Game
-There’s a word guessing game. One personthink a word, and the other one guess a word, both words have the same length.The person should return the number of bulls and cows for the guessing. Bullsrepresent the number of same characters in the same spots, whereas cowsrepresent the number of characters guessed right but in the wrong spots. Writea program with two input strings, return the number of bulls and cows.
+There’s a word guessing game. One person think a word, and the other one guess a word, both words have the same length.The person should return the number of bulls and cows for the guessing. Bulls represent the number of same characters in the same spots, whereas cows represent the number of characters guessed right but in the wrong spots. Write a program with two input strings, return the number of bulls and cows.
 
 35. Palindromes
 Print all palindromes of size greater than orequal to 3 of a given string. (How to do it with DP)?
 
 36. Unique Number
-Write, efficient code for extracting uniqueelements from a sorted list of array. e.g. (1, 1, 3, 3, 3, 5, 5, 5, 9, 9, 9, 9)-> (1, 3, 5, 9).
+Write, efficient code for extracting unique elements from a sorted list of array. e.g. (1, 1, 3, 3, 3, 5, 5, 5, 9, 9, 9, 9)-> (1, 3, 5, 9).
 
 37. Subtraction of two Arrays
-Suppose you want to do the subtraction of twonumbers. Each digit of the numbers is divided and put in an array. Like A=[1,2, 3, 4, 5], B=[4, 5, 3, 5]. You should output an array C=[7, 8, 1, 0].Remember that your machine can’t hand numbers larger than 20.
+Suppose you want to do the subtraction of two numbers. Each digit of the numbers is divided and put in an array. Like A=[1,2, 3, 4, 5], B=[4, 5, 3, 5]. You should output an array C=[7, 8, 1, 0].Remember that your machine can’t hand numbers larger than 20.
 
 38. Basketball Hit Rate
-The hit rate of the basketball game is givenby the number of hits divided by the number of chances. For example, youhave 73 chances but hit 15 times, then your hit rate is 15/73=0.205 (keep the last3 digits). On average, you have 4.5 chances in each basketball game. Assume thetotal number of games is 162. Write a function for a basketball player. Hewill input the number
-of hits he has made, the number of chances he had, and the number of remaininggames. The function should return the number of future hits, so that hecan refresh his hit rate to 0.45
+The hit rate of the basketball game is given by the number of hits divided by the number of chances. For example, you have 73 chances but hit 15 times, then your hit rate is 15/73=0.205 (keep the last3 digits). On average, you have 4.5 chances in each basketball game. Assume the total number of games is 162. Write a function for a basketball player. He will input the number
+of hits he has made, the number of chances he had, and the number of remaining games. The function should return the number of future hits, so that he can refresh his hit rate to 0.45
 
 39. Clock Angle
-We are given a specific time(like 02:23), weneed to get the angle between hour and minute(less than 180)
+We are given a specific time(like 02:23), we need to get the angle between hour and minute(less than 180)
 
 40. Jump Chess
-There’sa N*N board, two players join the jump game. The chess could go vertically andhorizontally. If the adjacent chess is opponent player’s and the spot besidethat is empty, then the chess could jump to that spot. One chess could not beenjumped twice. Given the position of the spot on the board, write the program tocount the longest length that chess could go.
+There’s a N*N board, two players join the jump game. The chess could go vertically and horizontally. If the adjacent chess is opponent player’s and the spot beside that is empty, then the chess could jump to that spot. One chess could not been jumped twice. Given the position of the spot on the board, write the program to count the longest length that chess could go.
 
 41. Decimal Number
 Let the user enter a decimal number. Therange allowed is 0.0001 to 0.9999. Only four decimal places are allowed. Theoutput should be an irreducible fraction. E.g.: If the user enters 0.35,the irreducible fraction will be 7/20.
