@@ -1,3 +1,5 @@
+package ll;
+
 /*
 Matrix Position
 Given an NxN matrix with unique integers :Find and print positions of all numbers such that it is the biggest in its row and also the smallest in its column . e.g. : In 3 x 3 with elements
@@ -11,16 +13,45 @@ import java.util.*;
 
 public class matrixPosition{
     
-    public static void findall(int n){
-        
-        
+    public static void findall(int[][] arr){
+
+    	printMatrix(arr);
+    	int n= arr.length;
+        int[] minInCol= new int[n];
+        for(int c=0; c< n; ++c){
+        	minInCol[c]=Integer.MAX_VALUE;
+        	for(int r=0; r<n; ++r){
+        		minInCol[c]= Math.min(minInCol[c], arr[r][c]);
+        	}
+        }
+        for(int r=0; r<n; ++r){
+        	int max= Integer.MIN_VALUE;
+        	int maxc=-1;
+        	for(int c=0; c<n; ++c){
+        		if(arr[r][c] > max){
+        			max= arr[r][c];
+        			maxc=c;
+        		}
+        	}
+        	if(max == minInCol[maxc])
+				System.out.println("max in row, min in col,  found in positon( " + r +"," + maxc+" ), value is: "+ max);
+        }
     }
     
+    public static void printMatrix(int[][] matrix){
+    	   System.out.println();
+    	   for(int i=0; i<matrix.length; ++i){
+    	      System.out.print("\n");
+    	      for(int j=0; j<matrix[0].length; ++j)
+    	         System.out.print(matrix[i][j] + " ");
+    	 }
+    	 System.out.println();
+    	}
     public static void main(String[] args){
-        int[][] arr= new int[10][10];
+        int[][] arr= new int[3][3];
         for(int i=0; i<arr.length; ++i)
         	for(int j=0; j< arr[0].length; ++j)
-        		arr[i][j]= (int)Math.random()*100;
+        		arr[i][j]= (int)(Math.random()*100);
         findall(arr);
         System.out.println();
         

@@ -5,24 +5,30 @@ If the adjacent chess is opponent player’s and the spot beside that is empty, th
 One chess could not been jumped twice. Given the position of the spot on the board, 
 write the program to count the longest length that chess could go.*/
 import java.util.*;
-
+ 
 public class jumpChess{
     static int n=0;
-    static int longestJump=0;
-    // problems
-    public static boolean canJump(int[][] matrix, int i, int j){
-    	if(i<0 || j<0|| i>=n || j>=n || matrix[i][j]==1 )
-    		return false;
-    	longestJump++;
-    	boolean res=
-    		canJump(matrix, i+2, j) 
-    		||canJump(matrix, i-2, j)
-    		||canJump(matrix, i, j-2) 
-    		||canJump(matrix, i, j+2);
-    	if(!res){
-    		System.out.println(longestJump);
-    		longestJump=0;
-    	}   		
+    static HashSet<Integer> visited= new HashSet<Integer>();
+    
+    public static int maxJump(int[][] matrix, int i, int j){
+    	System.out.println(i+" "+ j);
+    	System.out.println(visited);
+    	if(i<0 || j<0|| i>=n || j>=n || matrix[i][j]==1 || visited.contains(i*10000+j)  )
+    		return 0;  
+    	int res=0;
+    	visited.add(i*10000+j);
+    	int a=0, b=0, c=0, d=0;
+    	if(i+1< n && matrix[i+1][j]==1)
+    		a=maxJump(matrix, i+2, j) ;
+    	if(i-1>=0 && matrix[i-1][j]==1)
+    		b=maxJump(matrix, i-2, j) ;
+    	if(j+1< n && matrix[i][j+1]==1)
+    		c=maxJump(matrix, i, j+2) ;
+    	if(j-1>=0 && matrix[i][j-1]==1)
+    		d=maxJump(matrix, i, j-2) ;
+    	int tmp= Math.max(Math.max(a, b), Math.max(c, d));
+    	
+    	res=tmp+1;
     	return res;
     }
     public static void printMatrix(int[][] matrix){
@@ -35,7 +41,7 @@ public class jumpChess{
   	 System.out.println();
   	}
     public static void main(String[] args){
-    	int[][] matrix= new int[3][3];
+    	int[][] matrix= new int[15][15];
         n= matrix.length;
         for(int i=0; i< n; ++i){
         	for(int j=0; j< n; ++j){
@@ -43,8 +49,8 @@ public class jumpChess{
         	}
         }
         printMatrix(matrix);
-        canJump(matrix, 0, 0);
-        System.out.println(longestJump);
+        
+        System.out.println(maxJump(matrix, 0, 0));
         
     }
     
