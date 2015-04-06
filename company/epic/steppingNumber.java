@@ -35,10 +35,34 @@ public class steppingNumber{
         }
         return true;
     }
+
+    // round2
+    public static void generate2(int s, int e){
+        ArrayList<Integer> res= new ArrayList<Integer>();
+        while(s <=e){
+            if(isValid(res, s,s, e))
+                System.out.println(s);
+            s++;
+        }
+    }
+    public static boolean isValid(ArrayList<Integer> res, int s, int num, int e){
+        if(num <s || num >e)
+            return false;
+
+        String sn= String.valueOf(num);
+        if(sn.length()==1) return true;
+        for(int i=1; i< sn.length(); ++i){
+            int last= sn.charAt(i-1) - '0';
+            int cur= sn.charAt(i) - '0';
+            if(Math.abs(cur - last)!=1)
+                return false;
+        }
+        return true;        
+    }
     
     public static void main(String[] args){
         
-        System.out.println(generate(0,100).toString());
+        generate2(0, 100);
         
     }
     

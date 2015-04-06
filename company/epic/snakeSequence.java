@@ -11,66 +11,60 @@ import java.util.*;
 // take care! java's pass by reference is a SOB.
 public class snakeSequence{
     static int rownum, colnum;
-    static HashSet<Integer> visited= new HashSet<Integer>();
-    static String largest= new String();
-    static ArrayList<ArrayList<Integer>> allpaths= new ArrayList<ArrayList<Integer>> ();
-    
-    public static void getLargest(int[][] matrix){
-        rownum=matrix.length;
+    // round2
+
+    public static void getLargest2(int[][] matrix){
+        rownum= matrix.length;
         colnum= matrix[0].length;
-        if(rownum==0 || colnum==0) return ;
-        
+        HashSet<String> res= new HashSet<String>();
         for(int i=0; i< rownum; ++i){
-            for(int j=0; j<colnum; ++j){
-                visited= new HashSet<Integer>();
-                ArrayList<Integer> path= new ArrayList<Integer>();
-                helper(matrix, path, i, j);
+            for(int j=0; j< colnum; ++j){
+                HashSet<Integer> visited= new HashSet<Integer>();
+                helper2(res, matrix, "", i, j , visited);
             }
         }
         
-        for(ArrayList<Integer> p: allpaths){
-            System.out.println(p.toString());
+        String maxS="";
+        for(String s: res){
+            if(s.length() > maxS.length())
+                maxS= s;
         }
+        System.out.println(res);
+        System.out.println(maxS);
     }
-    // suppose matrix dimensions far less than 10000
-    public static boolean helper(int[][] matrix, ArrayList<Integer> path, int r, int c){
-        if(r>=rownum || r<0 || c>=colnum || c<0 ||visited.contains(r*10000+c)){
+
+    public static boolean helper2(HashSet<String> res, int [][] matrix, String path, int i, int j, HashSet<Integer> visited){
+        System.out.println(res);
+        if(i<0 || i>= rownum || j<0 || j>=colnum || visited.contains(i*10000+j))
             return false;
-        }
         
-        if(path.size()==0)
-            path.add(matrix[r][c]);
-        else{
-            int last= path.get(path.size()-1);
-            if(Math.abs(last- matrix[r][c])!=1){
+        if(path.length()==0){
+            path+= matrix[i][j];
+        }else{
+            int last= path.charAt(path.length()-1)-'0';
+            if(Math.abs(matrix[i][j]- last)!=1)
                 return false;
-            }
             else
-                path.add(matrix[r][c]);
+                path+= matrix[i][j];
         }
-        // search in surrounding
-        visited.add(r*10000+c);
-        boolean res= helper(matrix, path, r+1, c)
-        || helper(matrix, path, r-1, c)
-        || helper(matrix, path, r, c+1)
-        || helper(matrix, path, r, c-1);
-        
-        if(!res){// can not search any more
-            visited.remove(r*10000+c);
-            allpaths.add(new ArrayList<Integer>(path));
-            path.clear();
+        visited.add(i*10000+j);
+        boolean next= helper2(res, matrix, path, i+1, j, visited)
+        || helper2(res, matrix, path, i, j+1, visited);
+        if(!next){ // can not search anymore
+            if(! res.contains(path))
+            res.add(new String(path));
+            visited.remove(i*10000+j);
         }
-        return res;
+        return next;
     }
-    
     public static void main(String[] args){
         int[][] matrix={
             {1, 3, 2, 6, 8},
-           {3, 4, 1, -1, 2},
+           {3, 4, 1, 1, 2},
             {1, 5, 0, 1, 9},
         };
         
-        getLargest(matrix);
+        getLargest2(matrix);
         
     }
     

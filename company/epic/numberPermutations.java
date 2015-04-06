@@ -11,7 +11,7 @@ public class numberPermutations{
     
     public static void generate(int len){
         	ArrayList<String> res= new ArrayList<String>();
-        	helper(res, "", len);
+        	helper2(res, "", len);
         	System.out.println(res.toString());
     }
     public static void helper(ArrayList<String> res, String path , int len){
@@ -24,6 +24,7 @@ public class numberPermutations{
     	}
     
     }
+
     public static void main(String[] args){
         generate(4);
         System.out.println();

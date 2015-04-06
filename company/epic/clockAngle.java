@@ -1,4 +1,4 @@
-package ll;
+
 /*
 Clock Angle
 We are given a specific time(like 02:23), we need to get the angle between hour and minute(less than 180)
@@ -21,9 +21,23 @@ public class clockAngle{
         res= res>= 180 ? 360-res : res;
         System.out.println(res);
     }
-    
+    // round2
+    public static void get2(String time){
+        String[] tmp= time.split(":");
+        int hour= Integer.parseInt(tmp[0]);
+        int minute= Integer.parseInt(tmp[1]);
+
+        int angelpermin= 360/60, angelperhour= 5*angelpermin;
+        double hourpos= angelperhour * hour + (minute/ 60)*angelperhour;
+        double minpos= angelpermin* minute;
+        double res= Math.abs(hourpos - minpos);
+        res= res>=180 ? 360- res : res;
+
+        System.out.println(res);
+    }
     public static void main(String[] args){
-        get("11:00");
+        get2("12:00");
+        get2("6:00");
         System.out.println();
         
     }

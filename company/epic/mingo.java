@@ -19,7 +19,7 @@ Whenever, a row or a column or a diagonal is fully filled in this 10x10 from the
         int [][] matrix= new int[10][10];
 
         for(int i=0; i<100; ++i){
-        	randomFill(matrix);
+        	randomFill2(matrix);
         	//checkMingo(matrix);
         }        
     }
@@ -82,6 +82,65 @@ Whenever, a row or a column or a diagonal is fully filled in this 10x10 from the
           printMatrix(matrix);
           redDiagChecked=true;
       }
+  }
+}
+
+// round2
+public static void randomFill2(int[][] matrix){
+    Random rand= new Random();
+      int data=  rand.nextInt(1000) +1;
+      int cords= rand.nextInt(100);
+  int row= cords/10;
+  int col= cords%10;
+  while(matrix[row][col] !=0){
+     cords= rand.nextInt(100);
+     row= cords/10;
+     col= cords%10;
+  }
+  matrix[row][col]= data;
+  checkMingo2(matrix, row, col);
+}
+
+public static void checkMingo2(int[][] matrix, int row, int col){
+  // check row
+  int k=0;
+  while(k<10 && matrix[row][k] !=0)
+    k++;
+  if(k==10){
+    count++;
+    System.out.println("found the "+count +"th mingto");
+  }
+
+  // check col
+  k=0;
+  while(k<10 && matrix[k][col] !=0)
+    k++;
+  if(k==10){
+    count++;
+    System.out.println("found the "+count +"th mingto");
+  }
+
+  // check diagonal
+  k=0;
+  if(!diagChecked){
+    while(k<10 && matrix[k][k] !=0)
+    k++;
+    if(k==10){
+    count++;
+    System.out.println("found the "+count +"th mingto");
+    diagChecked= true;
+  }
+  }
+
+  k=0;
+  if(!redDiagChecked){
+    while(k<10 && matrix[k][9-k] !=0)
+    k++;
+  if(k==10){
+    count++;
+    System.out.println("found the "+count +"th mingto");
+    redDiagChecked= true;
+  }
   }
 }
 public static void printMatrix(int[][] matrix){

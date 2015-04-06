@@ -14,7 +14,7 @@ public class additiveNumber{
     // determined by the starting two numbers
     public static void generate(int s, int e){
         
-        helper(s, e, 0);
+        helper2(s, e, 0);
     }
     public static void helper(int start, int end, int num){
         if (num > end){  
@@ -33,7 +33,21 @@ public class additiveNumber{
         }
         
     }
-    
+    // round 2
+    public static void helper2(int start, int end, int num){
+        if(num > start)
+            return;
+        if(num > start)
+            System.out.println(num);
+        for(int i=0; i<=9; ++i){
+            for(int j=0; j<=9; ++j){
+                if(i+j <=9)
+                    helper(start, end, num*1000+ i*100+ j*10+ i+j);
+                else
+                    helper(start, end, num*10000 + i*1000+ j*100 + i+j);
+            }
+        }
+    }
     public static void main(String[] args){
         generate(1, 1000);
         System.out.println();

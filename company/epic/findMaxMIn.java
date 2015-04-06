@@ -1,7 +1,8 @@
 /*
 
 22. Find Max/Min Number
-Take a series of integers as input till a zero is entered. Among these given integers, find the maximum of the odd numbers and the minimum of the even integers (not including zero) and print them.
+Take a series of integers as input till a zero is entered. Among these given integers, 
+find the maximum of the odd numbers and the minimum of the even integers (not including zero) and print them.
 
 */
 
@@ -26,14 +27,25 @@ class findMaxMin{
     
     public static void main(String[] args) throws IOException{
         
-        Scanner sc= new Scanner(System.in);
+       /* Scanner sc= new Scanner(System.in);
         int[] input= new int[100];
         int i=0;
         while(!sc.hasNext("0")){
         	input[i]=Integer.parseInt(sc.next());
         	i++;
-        }
+        }*/
 
+        // round2
+        int[] input = new int[100];
+        //ArrayList<Integer> input= new ArrayList<Integer>();
+        Scanner in= new Scanner(System.in);
+        int i=0;
+        while(!in.hasNext("0")){
+            int val= Integer.parseInt(in.next());
+            input[i]=val;
+            i++;
+        }
+        //int[] arr= input.toArray(new int[input.size()]);
 
         find(input);
         

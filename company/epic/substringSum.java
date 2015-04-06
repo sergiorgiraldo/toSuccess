@@ -37,8 +37,25 @@ public class substringSum{
         
     }
     
+    // round2
+    public static void find2(String s, int target){
+        int n= s.length();
+        //if(n==0) return;
+        int start= 0;
+        int sum=0;
+        for(int i=0; i< n; ++i){
+            while(start < i && sum > target){
+                sum= sum- (s.charAt(start)-'0');
+                start++;
+            }
+            if(sum== target)
+                System.out.println((start+1)+"-"+(i));
+
+            sum+= s.charAt(i) -'0';
+        }
+    }
     public static void main(String[] args){
-        find("1763589", 16);
+        find2("1763589", 16);
         System.out.println();
         
     }

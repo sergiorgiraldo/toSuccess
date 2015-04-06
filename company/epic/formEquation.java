@@ -21,6 +21,21 @@ public class formEquation{
         }
         
     }
+    // round2
+    public static void verify2(int n){
+        String sn= String.valueOf(n);
+        for(int i=1; i< sn.length(); ++i){
+            for(int j= i+1; j< sn.length(); ++j){
+                int a= Integer.parseInt(sn.substring(0, i));
+                int b= Integer.parseInt(sn.substring(i, j));
+                int c= Integer.parseInt(sn.substring(j, sn.length()));
+                if(isValid(a, b, c)){
+                    System.out.println("valid");
+                }
+            }
+        }
+        
+    }
     public static boolean isValid(int a, int b, int c){
     	if(a==b+c || b==a+c || c==a+b)
     		return true;
@@ -28,8 +43,9 @@ public class formEquation{
     }
     
     public static void main(String[] args){
-        verify(123);
-        verify(17512);
+        verify2(123);
+        verify2(17512);
+        //verify2(111);
         System.out.println();
         
     }

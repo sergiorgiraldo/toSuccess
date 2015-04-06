@@ -8,9 +8,9 @@ import java.util.*;
 public class compareRGB{
     
     public static void compare(String s){
-        int rr= Integer.decode("0x"+ s.substring(0, 2));
-        int gg= Integer.decode("0x"+ s.substring(2, 4));
-        int bb= Integer.decode("0x"+ s.substring(4, 6));
+        int rr= Integer.decode("0x" + s.substring(0, 2));
+        int gg= Integer.decode("0x" + s.substring(2, 4));
+        int bb= Integer.decode("0x" + s.substring(4, 6));
 
         if( rr ==gg && gg==bb)
         	System.out.println("rr = gg = bb");

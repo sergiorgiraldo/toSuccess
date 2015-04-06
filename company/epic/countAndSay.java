@@ -30,9 +30,31 @@ public class countAndSay{
             itr++;
         }
     }
-    
+
+    // round2
+    public static void generate2(int n){
+        int itr=0;
+        String old= String.valueOf(n);
+        while(itr <10){        
+            System.out.println(old);
+            StringBuilder cur= new StringBuilder();           
+            for(int i=0; i < old.length();){
+                int count=0;
+                char value= old.charAt(i);
+                while(i< old.length() && old.charAt(i)==value){
+                    count++;
+                    i++;
+                }
+                cur.append(count);
+                cur.append(value);
+            }
+
+            old= cur.toString();
+            itr++;
+        }
+    }
     public static void main(String[] args){
-        generate(1);
+        generate2(2);
         System.out.println();
         
     }

@@ -21,28 +21,30 @@ public class spiralMatrix{
         int left=0, right=colnum-1;
         int up=0, bottom=rownum-1;
         
+        // round2
         while(true){
-            if(left > right && up >bottom)
+            
+            // up
+            for(int i= right; i>=left; --i)
+                System.out.println(matrix[up][i]);
+            // left
+            for(int i= up+1; i<= bottom; ++i)
+                System.out.println(matrix[i][left]);
+
+            // bottom
+            for(int i= left+1; i<= right; ++i)
+                System.out.println(matrix[bottom][i]);
+            // right
+            for(int i= bottom-1; i>=up+1; --i)
+                System.out.println(matrix[i][right]);
+
+            left++;
+            right--;
+            up++;
+            bottom--;
+
+            if(left > right || up > bottom)
                 break;
-            
-            //top
-            for(int i=right; i>=left; --i)
-                    System.out.print(matrix[up][i]);
-            //left
-            for(int i=up+1; i<=bottom; ++i)
-                System.out.print(matrix[i][left]);
-            //bottom
-            for(int i=left+1; i<=right; ++i)
-                System.out.print(matrix[bottom][i]);
-            //right
-            for(int i=bottom-1; i>up; --i)
-                System.out.print(matrix[i][right]);
-            
-                left++;
-                right--;
-            
-                up++;
-                bottom--;
         }
         
         

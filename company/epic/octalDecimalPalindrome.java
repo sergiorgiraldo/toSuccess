@@ -21,13 +21,21 @@ public class octalDecimalPalindrome{
         
     }
     public static String getOctal(int n){
-    	String res="";
+    	/*String res="";
     	while(n>0){
     		int remainder= n%8;
     		n=n/8;
     		res+=remainder;
     	}
-    	return res;// actually need the reversed res, but no matter in check palindrome
+    	return res;// actually need the reversed res, but no matter in check palindrome*/
+
+        // round 2
+        String res="";
+        while(n >0){
+            res+= n%8;
+            n= n/8;
+        }
+        return res;
     }
     public static boolean isPalindrome(String s){
     	int l=0, r= s.length()-1;

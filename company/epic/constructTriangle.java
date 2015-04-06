@@ -1,4 +1,4 @@
-package ll;
+
 /*Given a array 
 {{ 4,7,3,6,7}} 
 
@@ -20,7 +20,7 @@ public class constructTriangle{
         	bottom.add(arr[i]);
         triangle.add(bottom);
         
-        int i= bottom.size();
+        /*int i= bottom.size();
         while(i>1){
         	ArrayList<Integer> tmp= new ArrayList<Integer>();
         	for(int j=0; j< triangle.get(arr.length - i).size()-1; ++j){
@@ -30,8 +30,19 @@ public class constructTriangle{
         	}
         	triangle.add(tmp);
         	i--;
+        }*/
+
+        // round2
+        int i=arr.length;
+        while(i>1){
+            ArrayList<Integer> tmp = new ArrayList<Integer>();
+            ArrayList<Integer> down= triangle.get(arr.length - i);
+            for(int j=0; j< down.size()-1; ++j){
+                tmp.add(down.get(j) + down.get(j+1));
+            }
+            triangle.add(tmp);
+            i--;
         }
-        //for(ArrayList<Integer> tmp : triangle)
         System.out.println(triangle.toString());
     }
     

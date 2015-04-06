@@ -1,4 +1,3 @@
-package ll;
 /* Fill a “magic square”matrix.
 A magic square of order n is an arrangement of the numbers from 1 to n^2 in an n by n matrix with 
 each number occurring exactly once so that each row, each column and each main diagonal has the same sum. 
@@ -10,6 +9,7 @@ go to the cell below this cell and fill following number. An example of 5*5 grid
 4 6 0 0 0
 0 0 0 0 3
 0 0 0 2 9*/
+
 import java.util.*;
 
 public class magicSquare{
@@ -30,6 +30,23 @@ public class magicSquare{
         }
         printMatrix(matrix);
     }
+
+    // round2
+    public static void fill2(int n){
+        int[][] matrix= new int[n][n];
+        int x=0, y= n/2;
+        for(int i=1; i<= n*n; ++i){
+            matrix[x][y]= i;
+            int tmpx= x, tmpy=y;
+            x= x-1 <0 ? n-1 : x-1;
+            y= y+1 >= n? 0: y+1;
+            if(matrix[x][y]!=0){
+                x=tmpx +1;
+                y= tmpy;
+            }
+        }
+        printMatrix(matrix);
+    }
     public static void printMatrix(int[][] matrix){
  	   System.out.println();
  	   for(int i=0; i<matrix.length; ++i){
@@ -40,7 +57,7 @@ public class magicSquare{
  	 System.out.println();
  	}
     public static void main(String[] args){
-        fill(7);
+        fill2(7);
 
         System.out.println();
         

@@ -1,4 +1,4 @@
-package ll;
+
 /* Replace String
 From a given string, replace all instances of 'a' with 'one' and 'A' with 'ONE'.
 Example Input: " A boy is playing in a garden"
@@ -21,7 +21,7 @@ public class replaceString{
     		else if(ssplit[i].equals("A"))
     			ssplit[i]="ONE";
     		if(ssplit[i].length()>0)
-    			res+=ssplit[i]+" ";
+    			res+=ssplit[i]+" "; // important !
     	}
         res= res.substring(0, res.length()-1);
         System.out.println(res);

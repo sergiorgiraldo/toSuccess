@@ -10,7 +10,7 @@ public class decimalNumber{
     
     public static void reduce(double dicimal){
         int dividend=(int)(dicimal*10000), divisor=10000;
-        int gcd= getGCD(dividend, divisor);
+        int gcd= getGCD2(dividend, divisor);
         System.out.println("result is: " + dividend/gcd + "/" + divisor/gcd);
         
     }
@@ -27,7 +27,20 @@ public class decimalNumber{
     	}
     	return a;
     }
-
+    // round2
+    public static int getGCD2(int a, int b){
+        // 12, 6
+        if(a ==0)
+            return b;
+        if(b==0)
+            return a;
+        while(b !=0){
+            int t= b;
+            b= a%b;
+            a= t;
+        }
+        return a;
+    }
     public static void main(String[] args){
         reduce(0.35);
         reduce(0.24);

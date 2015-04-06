@@ -1,4 +1,4 @@
-package ll;
+
 /*
  Enumerate all possible anagrams of a random string 
  where capital letters, numbers, and symbols are not allowed to move within the string.
@@ -20,7 +20,7 @@ public class anagrams{
         int[] visited= new int[input.length];
             
         ArrayList<ArrayList<Character>> permutes= new  ArrayList<ArrayList<Character>>();
-        dfs(permutes, new ArrayList<Character>(), visited, input);
+        dfs2(permutes, new ArrayList<Character>(), visited, input);
         
         for(ArrayList<Character> one: permutes){
         	for(int i=0; i< s.length(); ++i){
@@ -29,6 +29,7 @@ public class anagrams{
             		one.add(i, c);
         	}
         }
+        
         for(ArrayList<Character> one: permutes){
         	String res="";
         	for(int i=0; i<one.size(); ++i)
@@ -53,6 +54,22 @@ public class anagrams{
     		path.remove(path.size()-1);
     		visited[i]=0;
     	}
+    }
+
+    // round2
+    public static void dfs2(ArrayList<ArrayList<Character>> res, ArrayList<Character> path , int[] visited, Character[] input){
+        if(path.size()==input.length){
+            res.add(new ArrayList<Character>(path));
+            return;
+        }
+        for(int i=0; i<input.length; ++i){
+            if(visited[i]==1) continue;
+            path.add(input[i]);
+            visited[i]=1;
+            dfs2(res, path,  visited, input);
+            path.remove(path.size()-1);
+            visited[i]=0;
+        }
     }
     
     public static void main(String[] args){

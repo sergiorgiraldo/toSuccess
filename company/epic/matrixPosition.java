@@ -1,4 +1,3 @@
-package ll;
 
 /*
 Matrix Position
@@ -37,7 +36,34 @@ public class matrixPosition{
 				System.out.println("max in row, min in col,  found in positon( " + r +"," + maxc+" ), value is: "+ max);
         }
     }
-    
+    // round2
+    public static void findall2(int[][] arr){
+        int n= arr.length;
+        printMatrix(arr);
+        int[] maxInRow= new int[n];
+
+        for(int i=0; i< n; ++i){
+            int max=Integer.MIN_VALUE;
+            for(int j=0; j<n; ++j){
+                max= Math.max(max, arr[i][j]);
+            }
+            maxInRow[i]= max;
+        }
+
+        for(int j=0; j< n; ++j){
+            int min=Integer.MAX_VALUE;
+            int minidx=-1;
+            for(int i=0; i<n; ++i){
+                if(arr[i][j] < min){
+                    min= arr[i][j];
+                    minidx= i;
+                }
+            }
+            if(maxInRow[minidx]== min)
+                System.out.println(min);
+        }
+    }
+
     public static void printMatrix(int[][] matrix){
     	   System.out.println();
     	   for(int i=0; i<matrix.length; ++i){
@@ -47,12 +73,13 @@ public class matrixPosition{
     	 }
     	 System.out.println();
     	}
+
     public static void main(String[] args){
         int[][] arr= new int[3][3];
         for(int i=0; i<arr.length; ++i)
         	for(int j=0; j< arr[0].length; ++j)
         		arr[i][j]= (int)(Math.random()*100);
-        findall(arr);
+        findall2(arr);
         System.out.println();
         
     }

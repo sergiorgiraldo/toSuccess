@@ -1,4 +1,3 @@
-package ll;
 /*
  Calendar
 Get a date (mon/day/year) from user. Print exact the week of dates (Sun to Sat). ex) input: 2/20/2001 if the day is Wednesday

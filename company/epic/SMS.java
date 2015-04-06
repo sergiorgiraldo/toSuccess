@@ -14,10 +14,10 @@ import java.util.*;
 
 public class SMS{
     static String[] dict= {"0", "1", "ABC2", "DEF3", "GHI4", "JKL5", "MNO6","PQRS7", "TUV8", "WXYZ9"};
-    public static ArrayList<String> translate(String s){
-        ArrayList<String>  res= new ArrayList<String> ();
-        if(s.length() <=0) return res;
-        helper(res, new String(), s);
+    public static String translate(String s){
+        //ArrayList<String>  res= new ArrayList<String> ();
+        //if(s.length() <=0) return res;
+        String res= helper2( new String(), s);
         return res;
     }
     public static void helper(ArrayList<String> res, String path, String s)
@@ -45,9 +45,30 @@ public class SMS{
             helper(res, path, s);
     	}
     }
-    
+    // round2
+   // dict= {"0", "1", "ABC2", "DEF3", "GHI4", "JKL5", "MNO6","PQRS7", "TUV8", "WXYZ9"};
+    public static String helper2(String path, String s){
+        if(s.length()==0)
+            return path;
+        char c= s.charAt(0);
+        if(c=='*'){
+            path+=" ";
+            return helper2(path, s.substring(1));
+        }else if(c=='#'){
+            return helper2(path, s.substring(1));
+        }else{
+            int count=0;
+            int dictIndex= c-'0';
+            while(count < s.length() && s.charAt(count)== c)
+                count++;
+            int charIndex= (count-1)%dict[dictIndex].length();
+            path+= dict[dictIndex].charAt(charIndex);
+            return helper2(path, s.substring(count));
+        }
+
+    }
     public static void main(String[] args){
-        System.out.println(translate("2***#22299#999").toString());
+        System.out.println(translate("2***#22299#999"));
         
     }
     

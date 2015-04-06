@@ -1,7 +1,7 @@
-package ll;
+
 /* Jump Chess
 There’s a N*N board, two players join the jump game. The chess could go vertically and horizontally. 
-If the adjacent chess is opponent player’s and the spot beside that is empty, then the chess could jump to that spot. 
+If the adjacent chess is opponent player's and the spot beside that is empty, then the chess could jump to that spot. 
 One chess could not been jumped twice. Given the position of the spot on the board, 
 write the program to count the longest length that chess could go.*/
 import java.util.*;
@@ -31,6 +31,21 @@ public class jumpChess{
     	res=tmp+1;
     	return res;
     }
+    // round2
+    public static int maxJump2(int[][] matrix, int i, int j){
+        if(i<0 || i>=n || j<0 || j>=n || visited.contains(i*10000+j) || matrix[i][j]==1)
+            return 0;
+        int res=0;
+        visited.add(i*10000+j);
+        int a= (i+1 <n && matrix[i+1][j]==1)? maxJump2(matrix, i+1, j) : 0;
+        int b= (i-1>=0 && matrix[i-1][j]==1)? maxJump2(matrix, i-1, j) : 0;
+        int c= (j+1 <n && matrix[i][j+1]==1)? maxJump2(matrix, i, j+1) : 0;
+        int d= (j-1 >=0 && matrix[i][j-1]==1)? maxJump2(matrix, i, j-1) : 0;
+        int tmp= Math.max(Math.max(a,b), Math.max(c, d));
+        return res+=tmp+1;
+
+    }
+
     public static void printMatrix(int[][] matrix){
   	   System.out.println();
   	   for(int i=0; i<n; ++i){

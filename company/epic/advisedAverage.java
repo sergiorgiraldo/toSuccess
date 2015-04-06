@@ -27,9 +27,7 @@ public class advisedAverage{
                 third= i;
             }
         }
-        
-        //System.out.println(A[first] +" "+ A[second] +" "+ A[third]);
-        
+ 
         int sum=0;
         for(int i=0; i< A.length; ++i){
             if(i==first || i==second || i==third)
@@ -37,6 +35,31 @@ public class advisedAverage{
             sum+=A[i];
         }
         return 1.0*sum/(A.length-3);
+    }
+    // round2
+    public static double calculate2(int[] arr){
+        if(arr.length <=3)
+            return 0;
+        int max1= arr[0], max2= arr[0], max3= arr[0];
+        for(int i=0; i< arr.length; ++i){
+            if(arr[i] > max1){
+                int t1= max1;
+                max1= arr[i];
+                int t2= max2;
+                max2= t1;
+                max3= t2;
+            }else if(arr[i] < max1 && arr[i] >= max2 ){
+                int t= max2;
+                max2= arr[i];
+                max3= t;
+            }else if( arr[i] < max2 && arr[i] >=max3){
+                max3= arr[i];
+            }
+        }
+        int res=0;
+        for(int num: arr)
+            res+=num;
+        return (res- max1- max2-max3)*1.0/ (arr.length-3);
     }
     
     public static void main(String[] args){

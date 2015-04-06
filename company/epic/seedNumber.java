@@ -1,4 +1,4 @@
-package ll;
+
 /*
 Seeds Number
 Find the seed of a number. .
@@ -23,9 +23,24 @@ public class seedNumber{
         }
         
     }
-    
+    // round2
+    public static void find2(int target){
+        
+        for(int i=1; i<= target/2; ++i){
+            if(target %i !=0)
+                continue;
+            String cur= String.valueOf(i);
+            int res=i;
+            for(int j=0; j< cur.length(); ++j){
+                res*= cur.charAt(j) - '0'; // do not forget to subtract '0'
+            }
+            if(res== target)
+                System.out.println(cur);
+        }
+
+    }
     public static void main(String[] args){
-        find(24);
+        find2(24);
         System.out.println();
         
     }

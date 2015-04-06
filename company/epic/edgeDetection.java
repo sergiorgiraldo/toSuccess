@@ -12,6 +12,8 @@ import java.util.*;
 
 public class edgeDetection{
     // not finished
+    //static int W;
+    //static int H;
     public static void detect(int[] image, int W, int X){
 
     	int H= image.length/W;
@@ -19,18 +21,36 @@ public class edgeDetection{
     	int xprev, xnext, yup, ydown, cur;
         for(int x=0; x< W; ++x){
         	for(int y=0; y< H; ++y){
-        		int cvalue= image[i*W +j];
+        		int cvalue= image[x*W +y];
         		xprev= x-1<0 ? 0: x-1;
         		xnext= x+1== W? x: x+1;
         		yup= y-1<0 ? 0:y-1;
         		ydown= y+1==H? y: y+1;
+        		if(isValid(xprev, xnext, yup, ydown, cvalue, X, image, W))
+        			System.out.println(cvalue);
         	}
         }
         
     }
+    public static boolean isValid(int xprev, int xnext, int yup, int ydown, int value, int threshold, int[] image, int W){
+    	for(int i=xprev; i<= xnext; ++i){
+    		for(int j= yup; j<=ydown; ++j){
+    			int thisvalue= image[i*W+j];
+    			if(Math.abs(value- thisvalue) >= threshold)
+    				return true;
+    		}
+    	}
+    	return true;
+    }
     
     public static void main(String[] args){
-        
+        int[] image= {
+        	1, 1, 1, 1, 1,
+        	1, 9, 1, 1, 1, 
+        	1, 1, 1, 10, 1,
+        	1, 1, 1 ,1, 1
+        };
+        detect(image, 5, 5);
         System.out.println();
         
     }

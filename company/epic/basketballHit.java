@@ -1,4 +1,4 @@
-package ll;
+
 /* Basketball Hit Rate
 The hit rate of the basketball game is given by the number of hits divided by the number of chances. 
 For example, you have 73 chances but hit 15 times, then your hit rate is 15/73=0.205 (keep the last3 digits).
@@ -19,9 +19,15 @@ public class basketballHit{
         return futurehits;
     }
     
+    // round2
+    public static int predict2(int hits, int chances, int remianing){
+        // (hits+ futurehits)/(chances + remaining*4.5)= 0.45
+        int futurehits= (int)(0.45*(chances+ remianing* 4.5) )- hits;
+        return futurehits;
+    }
     public static void main(String[] args){
         
-        System.out.println(predict(12, 73, 89));
+        System.out.println(predict2(12, 73, 89));
         
     }
     

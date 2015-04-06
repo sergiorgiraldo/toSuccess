@@ -29,10 +29,31 @@ public class validPassword{
             i++;
         return i==expected.length();
     }
+    // round 2
+    public static boolean isValid2(String entered, String expected){
+        int i=0, j=0;
+        char broken= '#';
+        while(j< entered.length()){
+            if( entered.charAt(j) != expected.charAt(i) && broken=='#'){
+                broken= expected.charAt(i);
+                i++;
+            }else if(entered.charAt(j) != expected.charAt(i) && broken!=expected.charAt(i)){
+                return false;
+            }else if(entered.charAt(j) != expected.charAt(i) && broken==expected.charAt(i)){
+                i++;
+            }else{
+                i++;
+                j++;
+            }
+        }
+        while(i < expected.length() && expected.charAt(i)== broken)
+            i++;
+        return i== expected.length();
+    }
     
     public static void main(String[] args){
         
-        System.out.println(isValid("164", "1868884888"));
+        System.out.println(isValid2("164", "1868884888"));
         
     }
     
