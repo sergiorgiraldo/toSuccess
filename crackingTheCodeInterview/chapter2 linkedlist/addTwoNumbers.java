@@ -69,17 +69,18 @@ public class addTwoNumbers{
     }
     
     public static ListNode reverse(ListNode h){
-        ListNode dummy= new ListNode(-1);
+    ListNode dummy= new ListNode(-1);
+ 
+    while(h !=null){
+        ListNode next= h.next;
+        ListNode tmp= dummy.next;
+        dummy.next= h;
+        h.next= tmp;
         
-        while(h !=null){
-            ListNode tmp=new ListNode(h.val); // must allocate
-            tmp.next= dummy.next;
-            dummy.next= tmp;
-            
-            h= h.next;
-        }
-        return dummy.next;
+        h= next;
     }
+    return dummy.next;
+}
     
     public static void main(String[] args){
         int[] n1= {9, 2, 3, 8, 9};
