@@ -282,3 +282,55 @@ Given a number find whether the digits in the number can be used to form an equa
 48. Octal and Decimal Palindrome
 
 The decimal and octal values of some numbers are both palindromes sometimes. Find such numbers within a given range.
+
+49. Evalate Equation
+given an expression like 3*4 + 8-9 (only +, - , * operators) as a string evaluate it strictly from left to right
+
+50. Align Text
+given a horizontal array of strings convert it to vertical. like english characters are read left to right. convert them to a chinese format which is read vertically. 
+eg. 
+epic is a healthcare company. 
+interviewing for software developer. 
+print this vertically sentence by sentence.
+
+51. find Date
+If jan 1 2011 is tuesday then what will be the name of the day for march 6 2064 and print that.
+
+52.
+Mutiplicative iteration.Assume letters are A=1,B=2....The number N=4 then A=1*4=4.If result is greater than 26 mod 26.Input a string and give a encrypted result as output.
+
+53.
+Write a function which takes an input for a double dimensional matrix.Each page is 1000 pixels wide and 1000 pixels high.A black pixel is represented by 1 and a white pixel by 0.Return an answer set of array of row numbers for appropriate page breaks.A page break would ideally be a row with all white pixels.If the page break is encountered more than 1000 rows from the last break then the page break should be forcefully taken 1000 rows from the last break.
+
+54.
+Enumerate all possible anagrams of a random string where capital letters, numbers, and symbols are not allowed to move within the string.
+
+55.
+Given a array 
+{{ 4,7,3,6,7}} 
+
+construct a triangle like 
+{{81}} 
+{{40,41}} 
+{{21,19,22}} 
+{{11,10,9,13}} 
+{{ 4,7,3,6,7}}
+
+56.
+There are two roommates. Each one prepares a list for grocery store. Make a combined list without any duplicates.
+
+57.
+http://www.careercup.com/question?id=5075068254158848
+
+58.
+Given n. Generate all numbers with number of digits equal to n, such that the digit to the right is greater than the left digit (ai+1 > ai). E.g. if n=3 (123,124,125,……129,234,…..789)
+
+59.
+http://www.careercup.com/question?id=6011586686746624
+
+60.
+Length is given as input.Print all possible permutations of numbers between 0-9. 
+Eg: if input length=4 
+all possible combinations can be 0123, 1234, 5678,9864,...etc all combinations of length from in all numbers between 0-9
+
+61.
