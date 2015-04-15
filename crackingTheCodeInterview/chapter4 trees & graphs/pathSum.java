@@ -13,9 +13,10 @@ public class pathSum{
          if(root==null)
          	return;
          buffer.add(root.val);
+         int tmp= sum;
          for(int i= level; i>=0; --i){
-   			sum-= buffer.get(i);
-   			if(sum==0)
+   			tmp-= buffer.get(i);
+   			if(tmp==0)
    				printPath(buffer, i, level);
          }
 

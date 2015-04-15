@@ -20,9 +20,9 @@ public class subtree{
                     found= true;
                 }
             }else{
-                if(cur.left！= null)
+                if(cur.left != null)
                     s.push(cur.left);
-                if(cur.right！= null)
+                if(cur.right != null)
                     s.push(cur.right);
             }
         }
@@ -30,7 +30,7 @@ public class subtree{
             System.out.println("not found !");
     }
     
-    public boolean isSameTree(TreeNode t1, TreeNode t2){
+    public static boolean isSameTree(TreeNode t1, TreeNode t2){
         if(t1 ==null && t2== null)
             return true;
         if(t1== null || t2== null)
