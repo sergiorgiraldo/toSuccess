@@ -72,5 +72,10 @@ public class decodeTree{
         System.out.println(detree.left.left.val);
         System.out.println(detree.left.right.val);
     }
-    
+    /*
+     Follow Up:
+     1.Store the inorder and preorder traversal and retrieve back. or
+     2.Store the inorder and post order and retrieve back
+     
+     */
 }
