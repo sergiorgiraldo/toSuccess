@@ -7,30 +7,7 @@ import java.util.Arrays;
 
 class quickSort{
     
-    public static int  partition1(int[] arr, int left, int right){
-        System.out.println(Arrays.toString(arr));
-        int pivot= arr[left];
-        int i=left;
-        int j=right;
-        while(i <= j){
-            while(arr[i] < pivot )// no equal, first element never get exchanged, will cause stackoverflow
-                i++;
-            while(arr[j] > pivot )
-                j--;
-            
-            if( i<= j){
-                int t=arr[i];
-                arr[i]=arr[j];
-                arr[j]=t;
-                i++;
-                j--;
-            }
-        }
-        // j=i-1, i=j+1
-        return i;
-    }
-    
-    public static int partition2(int[] arr, int left, int right){
+    public static int partition1(int[] arr, int left, int right){
         System.out.println(Arrays.toString(arr));
         int pivot= arr[right];
         int pointer=left;
@@ -51,41 +28,55 @@ class quickSort{
     }
     
     public static void quicksort(int[] arr, int left, int right){
-        /*int q=partition1(arr, left, right);
-        System.out.println(q);
-
-        if(left < q-1)
-            quicksort(arr, left, q-1);
-        if( right > q)
-            quicksort(arr, q, right);*/
-        
+        if(left >= right)
+            return;
         int q=partition2(arr, left, right);
         System.out.println(q);
-        if(left < q-1) // can not equal to q, will reuse the qth element as pivot and cause stackoverflow
-            quicksort(arr, left, q-1);
-        if( right > q+1)
-            quicksort(arr, q+1, right);
+        quicksort(arr, left, q-1);
+        quicksort(arr, q+1, right);
        
+    }
+    // round2
+    public static int partition2(int[] arr, int left, int right){
+        int pivot= arr[right];
+        int pointer= left;// the final pivot position
+        for(int i=left; i< right; ++i){
+            if(arr[i] > pivot){
+            // if smaller than pivot, move to pivot's left
+                int t= arr[pointer];
+                arr[pointer]= arr[i];
+                arr[i]= t;
+                pointer++;
+            }
+        }
+        // swap arr[pointer] & arr[right], that is move the pivot to the pointer position
+        int t= arr[pointer];
+        arr[pointer]= arr[right];
+        arr[right]= t;
+        return pointer;
     }
     
     public static void main(String[] args){
         int[] arr= {5,3, 2, 6, 4, 1, 3, 7};
-        int[] arr1={5, 4, 3, 2, 1};
+        int[] arr1={5, 4, 3, 2,2,2, 1};
         
-        quicksort(arr1, 0, arr1.length-1);
+        quicksort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
 }
 /*
  The running time of quicksort depends on whether the partition is balanced or not, and this in turn depends on which elements are used for pivot.
+ 
  1. How would you modify quicksort to sort in non-increasing order?
  rewrite the compare to: arr[i] > pivot
+ 
  2. choose the pivot
   choosing either a random index for the pivot
   choosing the middle index of the partition 
   (especially for longer partitions) choosing the median of the first, middle and last element of the partition for the pivot
  
  (lo + hi)/2, may cause overflow and provide an invalid pivot index. This can be overcome by using, for example, lo + (hi-lo)/2 to index the middle element,
+ 
  3.Repeated elements
   separates the values into three groups: values less than the pivot, values equal to the pivot, and values greater than the pivot.
  
