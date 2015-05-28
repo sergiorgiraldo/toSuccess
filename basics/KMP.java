@@ -25,6 +25,7 @@ public class KMP{
          System.out.println();
     }
     
+    // some problems here 
     public static int[] getPartialMatchTable(String pattern){
     	int len= pattern.length();
     	int[] table= new int[len];

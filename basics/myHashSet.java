@@ -12,7 +12,7 @@ public class myHashSet extends AbstractSet{
             next= null;
         }
     }
-    
+    // some problems here
     class hashsetIterator implements Iterator{
         private Node next;
         private Node cur;
