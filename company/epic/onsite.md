@@ -42,7 +42,7 @@ Database
 
 Notification
 
-send message to patients with phone number/ patients with email 
+send message to patients with phone number/email in database
 
 #####Follow up I: x轴是所有对应的该打疫苗的时间，y轴是大概15种疫苗，里面是每个疫苗用条状的block来表示最佳打疫苗的时间。怎么样决定打疫苗的时间，能够让去医院的次数最少
 
@@ -55,5 +55,5 @@ https://courses.cs.washington.edu/courses/cse421/08au/Greedy.pdf
 
 - 所有的可能组合选最小的
 
-####Question3 Emergency Room
+####Question4 Emergency Room
 Priority Queue

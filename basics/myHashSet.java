@@ -1,6 +1,7 @@
 /*
 implement hashset from scratch
 reference: big java chapter 16
+
 */
 public class myHashSet extends AbstractSet{
     class Node{
