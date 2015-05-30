@@ -9,7 +9,7 @@ DP from lintcode and leetcode, categorized
 
 ##### Other String Problems
 1. [Scramble String ](https://leetcode.com/problems/scramble-string/)
-2. [Palindrome Partitioning ](https://leetcode.com/problems/palindrome-partitioning/)
+2. 
 3. [Palindrome Partitioning II ](https://leetcode.com/problems/palindrome-partitioning-ii/)
 4. [Longest Valid Parentheses ](https://leetcode.com/problems/longest-valid-parentheses/)
 
@@ -17,8 +17,8 @@ DP from lintcode and leetcode, categorized
 1. [Backpack](http://www.lintcode.com/en/problem/backpack/)
 2. [Backpack II](http://www.lintcode.com/en/problem/backpack-ii/)
 
-##### DFS with Memorization
-1. []()
+##### DFS, DP && Trace-back
+1. [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 2. []()
 3. []()
 4. []()
