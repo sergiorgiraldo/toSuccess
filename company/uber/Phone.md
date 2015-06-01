@@ -29,25 +29,28 @@ Check anagrams: 1 sort and compare 2 count every characters
 7. if cacheable, response is stored in cache
 8. browser decodes response (e.g. if it’s gzipped)
 9. browser determines what to do with response (e.g. is it a HTML page, is it an image, is it a sound clip?)
-browser renders response, or offers a download dialog for unrecognized types
 10. browser renders response, or offers a download dialog for unrecognized types
 
 #####Reverse Words in a String II
 Follow up是加入符号但是reverse的时候需要保留位置. 我大概讲了一下想到的两种思路, 不是最优, 并且由于时间不够, 也没有写完. 面试官最后提了一下最优思路(用Double Stack)
+
 #####问了什么是RPC, 怎么实现的. Linux的file system的结构, 最后让我自己设计一个结构可以存很大的file.
 #####有一个很长的list<pair<int, int> > 第一个int 的这个node的序号，第二个int 是这个node 的weight。 写一个函数返回node的序号， 比如：
 (2, 3)->(3, 5)->(1, 7). 那么返回2的概率是（3／15）， 3的概率是：（5／15）
 我的感觉是先遍历一下list，然后记录总的weights， 然后产生一个random number， 代表weight_th， 最后从头遍历找到weight_th落在哪个node，然后就返回那个node。
-#####1. regex match
-2. 实现trie. 
-3. youtube architecture设计。. 
+
+#####
+1. regex match
+2. 实现trie
+3. youtube architecture设计。.
+>>>>>>> 4e6be43122199bb16dd33d3c0ad09291677fedeb
 4. 聊天。
 5. min stack
 
 #####计算表达式  1+2*3+4 = 11可以去搜parse mathematical expression
 #####题目是这样，给一个file，把file里的内容format成json.
 File:
-== Abc*# ==. 
+== Abc*# ==.
 
 = I am a string\\
 === abc ===. 
@@ -57,14 +60,14 @@ Expected Json:
        {'title': 'abc*#',
         'body': 'i am a string\\'
         }
-'abc-1':. visit 1point3acres.com for more.
+'abc-1':
        {'title': 'abc',
         'body': ''}
 }
 有三点注意：
 一个是title虽然和key可能一样，但是key没有non-alpha和non-space的character,title可以有。这里我用了regex。
 另一个title被equal quotes起来了，但一定是前后都有才可以，那个第三行的‘= I am a string\\’就不是title。
-另外一个是如果有相同key,需要加上dash和第几次重复。这里我用的是dict装count，当时只想到这个，不知道大家会怎么想的。.鐣欏璁哄潧-涓€浜�-涓夊垎鍦�
+另外一个是如果有相同key,需要加上dash和第几次重复。这里我用的是dict装count，当时只想到这个，不知道大家会怎么想的。
 body应该还好，就是有可能为空，没有特别需要处理的
 #####一道题：longest distance in binary tree，可以是任意两个节点。就是把Binary Tree Maximum Path Sum的每个节点value改为1，最后减去1即可。
 
@@ -121,7 +124,7 @@ http://www.mitbbs.com/article_t/JobHunting/32977923.html
 [lowest common ancestor in binary search tree](http://www.lintcode.com/en/problem/lowest-common-ancestor/) iteratively
 [median of two sorted array](http://www.lintcode.com/en/problem/median-of-two-sorted-arrays/)
 [Best Time to Buy and Sell Stock]()
-[]()
+[Trie]()
 []()
 []()
 []()
