@@ -39,19 +39,19 @@ Follow up是加入符号但是reverse的时候需要保留位置. 我大概讲�
 (2, 3)->(3, 5)->(1, 7). 那么返回2的概率是（3／15）， 3的概率是：（5／15）
 我的感觉是先遍历一下list，然后记录总的weights， 然后产生一个random number， 代表weight_th， 最后从头遍历找到weight_th落在哪个node，然后就返回那个node。
 #####1. regex match
-2. 实现trie. 1point 3acres 璁哄潧
-3. youtube architecture设计。. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+2. 实现trie. 
+3. youtube architecture设计。. 
 4. 聊天。
 5. min stack
 
 #####计算表达式  1+2*3+4 = 11可以去搜parse mathematical expression
 #####题目是这样，给一个file，把file里的内容format成json.
 File:
-== Abc*# ==. 1point 3acres 璁哄潧
+== Abc*# ==. 
 
 = I am a string\\
-=== abc ===. 1point 3acres 璁哄潧
-.鏈枃鍘熷垱鑷�1point3acres璁哄潧
+=== abc ===. 
+
 Expected Json:
 {'abc': 
        {'title': 'abc*#',
