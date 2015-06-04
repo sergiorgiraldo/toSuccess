@@ -26,7 +26,11 @@
 ###### Sorted Array
 1. [Remove Duplicates from Sorted Array II](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array-ii/)
 2. [Merge Sorted Array](www.lintcode.com/en/problem/merge-sorted-array/)
-
+3. [Sort Colors](http://www.lintcode.com/en/problem/sort-colors/)
+4. []()
+5. []()
+6. []()
+7. []()
 ###### Rotate Array
 1. [Rotate String](http://www.lintcode.com/en/problem/rotate-string/)
 2. [Recover Rotated Sorted Array](http://www.lintcode.com/en/problem/recover-rotated-sorted-array/)
@@ -44,7 +48,7 @@
 #### Matrix
 1. [Matrix Zigzag Traversal](http://www.lintcode.com/en/problem/matrix-zigzag-traversal/)
 2. [Rotate Image](http://www.lintcode.com/en/problem/rotate-image/)
-2. []()
+2. [Set Matrix Zeroes](http://www.lintcode.com/en/problem/set-matrix-zeroes/)
 3. []()
 4. []()
 5. []()
@@ -56,8 +60,8 @@
 1. [Search Insert Position](http://www.lintcode.com/en/problem/search-insert-position/)
 2. [Merge Sorted Array II](http://www.lintcode.com/en/problem/merge-sorted-array-ii/)
 3. [Search a 2D Matrix](http://www.lintcode.com/en/problem/search-a-2d-matrix/)
-4. []()
-5. []()
+4. [Find Peak Element](http://www.lintcode.com/en/problem/find-peak-element/)
+5. [Find Peak Element II](http://www.lintcode.com/en/problem/find-peak-element-ii/)
 6. []()
 7. []()
 

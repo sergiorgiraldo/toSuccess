@@ -1,4 +1,4 @@
-##### Permutation/Combination/Subset
+#### Permutation/Combination/Subset
 1. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 2. [Subsets](http://www.lintcode.com/en/problem/subsets/): iterative & recursive
 3. [Subsets II](http://www.lintcode.com/en/problem/subsets-ii/)
@@ -11,7 +11,7 @@
 10. []()
 11. []()
 
-##### Word
+#### Word
 1. [Word Break](http://www.lintcode.com/en/problem/word-break/)
 2. [Word Break II](https://leetcode.com/problems/word-break-ii/)
 3. [Word Ladder](http://www.lintcode.com/en/problem/word-ladder/)
