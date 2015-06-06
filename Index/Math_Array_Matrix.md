@@ -26,7 +26,7 @@
 ###### Sorted Array
 1. [Remove Duplicates from Sorted Array II](http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array-ii/)
 2. [Merge Sorted Array](www.lintcode.com/en/problem/merge-sorted-array/)
-3. [Sort Colors](http://www.lintcode.com/en/problem/sort-colors/)
+3. 
 4. []()
 5. []()
 6. []()
