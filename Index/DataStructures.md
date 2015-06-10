@@ -1,5 +1,6 @@
 ###Queue
-
+1. [Implement Queue by Two Stacks](http://www.lintcode.com/en/problem/implement-queue-by-two-stacks/)
+	- key: 
 
 
 ###Stack
@@ -15,6 +16,7 @@
 
 ###Heap
 1. [Merge k Sorted Lists](http://www.lintcode.com/en/problem/merge-k-sorted-lists/)
-2. []()
+2. [Medium Kth Smallest Number in Sorted Matrix](http://www.lintcode.com/en/problem/kth-smallest-number-in-sorted-matrix/)
+	- key: merge sort: O(nlogn), priorityqueue: O(klogn).  怎样更新heap? init with a row number, pop and get next from the same column 
 3. []()
 4. []()
