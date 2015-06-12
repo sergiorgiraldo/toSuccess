@@ -1,0 +1,66 @@
+## Minimum Size Subarray Sum 
+[Minimum Size Subarray Sum](http://www.lintcode.com/en/problem/minimum-size-subarray-sum/)
+
+Given an array of n positive integers and a positive integer s, find the minimal length of a subarray of which the sum ≥ s. If there isn't one, return -1 instead.
+
+Example
+```
+Given the array [2,3,1,2,4,3] and s = 7, the subarray [4,3] has the minimal length under the problem constraint.
+Challenge
+
+If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).
+```
+
+
+###Solution 1：
+A typical two pointer problem. Maintain l & r pointer: 
+while current sum < s, keep moving the r pointer. while sum > s, keep increasing the l pointer, and check whether there is a update in the global minimum length.
+Notice, if during the whole process, there is no case that sum > s, we should return -1, here I used localmax to record this information.  
+
+```
+Time: O(n) 
+Space: O(1)
+
+```
+
+####Algorithm:
+
+
+```java
+	public int minimumSize(int[] nums, int s) {
+        // write your code here
+        int min= nums.length;
+        if(nums.length==0) return -1;
+        int l=0, r= 0, localsum= 0, localmax=-1;
+        while(r < nums.length){
+            while(localsum < s && r< nums.length){
+                localsum+= nums[r];
+                r++;
+            }
+            while(localsum >= s && l<=r){
+                localmax= Math.max(localmax, localsum);
+                min=Math.min(min, r-l);
+                localsum-= nums[l];
+                l++;
+            }
+            
+        }
+        return localmax < s ? -1 : min;
+    }
+```
+
+###Solution 2: 
+
+```
+Time:  O(nlogn)
+Space: 
+
+```
+####Algorithm:
+
+
+```java
+
+
+
+```

@@ -1,4 +1,4 @@
-## LintCode Kth Smallest Number in Sorted Matrix
+## Kth Smallest Number in Sorted Matrix
 [Kth Smallest Number in Sorted Matrix](http://www.lintcode.com/en/problem/kth-smallest-number-in-sorted-matrix/)
 
 Find the kth smallest number in at row and column sorted matrix.
@@ -21,7 +21,7 @@ Do it in O(k log n), n is the maximal number in width and height.
 There are two solutions： 1） BST 2)PriorityQueue 
 
 ###Solution 1：
-【】
+
 
 ###Solution 2: 
 Similar to [Merge k Sorted Lists](http://www.lintcode.com/en/problem/merge-k-sorted-lists/). It's fundamentally a merge sort algorithm: maintain a PriorityQueue, initialized with the first row or column and poll the top for k times. So the crux here is how to update the heap after polling: get the next element from the same row of the top if initialized by first column, or get the next element from the same column of the top if initialized by the first row. 
