@@ -48,6 +48,8 @@ DP from lintcode and leetcode, categorized
 1. [Climbing Stairs](http://www.lintcode.com/en/problem/climbing-stairs/)
 2. [Jump Game](http://www.lintcode.com/en/problem/jump-game/)
 3. [Jump Game II](http://www.lintcode.com/en/problem/jump-game-ii/) dp+ greedy
+    - Maintain the previous max reach, and the current max reach. When we can not reach current position by prevmax, it's time to add one more step
+    
 4. [Coins in a Line](http://www.lintcode.com/en/problem/coins-in-a-line/)
 5. [Coins in a Line III](http://www.lintcode.com/en/problem/coins-in-a-line-iii/)
 6. [Best Time to Buy and Sell Stock I]()
