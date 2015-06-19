@@ -10,7 +10,7 @@ For problems that can not be accepted in one or two pass submit
 7. [Path Sum II](https://leetcode.com/problems/path-sum-ii/)
     - end condition
 ###Backtracking
-1. []()
+1. [N-Queens](http://www.lintcode.com/en/problem/n-queens/)
 2. []()
 3. []()
 4. []()
