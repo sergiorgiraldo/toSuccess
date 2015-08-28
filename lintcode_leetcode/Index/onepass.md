@@ -9,6 +9,7 @@ For problems that can not be accepted in one or two pass submit, need more pract
 6. [Binary Tree Right Side View ](https://leetcode.com/problems/binary-tree-right-side-view/)
 7. [Path Sum II](https://leetcode.com/problems/path-sum-ii/)
     - end condition
+
 ###Backtracking
 1. [N-Queens](http://www.lintcode.com/en/problem/n-queens/)
 2. [Permutations II](http://www.lintcode.com/en/problem/permutations-ii/)
@@ -24,11 +25,18 @@ For problems that can not be accepted in one or two pass submit, need more pract
 
 ###DP
 1. [Edit Distance](http://www.lintcode.com/en/problem/edit-distance/)
-2. []()
-3. []()
-1. []()
-2. []()
-3. []()
-1. []()
-2. []()
-3. []()
+	- init and condition
+2. [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/)
+	- corner case
+3. [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
+	- init and condition
+4. [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
+5. [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
+	TLE
+6. [Word Break](https://leetcode.com/problems/word-break/)
+	TLE
+7. [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
+8. [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
+9. [Interleaving String](https://leetcode.com/problems/interleaving-string/)
+10. [Palindrome Partitioning II](http://www.lintcode.com/en/problem/palindrome-partitioning-ii/)
+11. [Dungeon Game](https://leetcode.com/problems/dungeon-game/)

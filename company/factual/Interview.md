@@ -31,26 +31,55 @@ double maxSpeed();                // the maximum rate of travel for any person
 
 */
 
-class getProbability{
-Location from;
-Location To;
-public void init(Location A,  Location B){
-    from=A;
-    to = B;
-}
 
-// suppose we used DFS; is that something you think you could write up?
-// how about we write something up in comments as pseudocode?
-public void BFS( ){
-        int countPah=0, countStar=0;
-        Stack<Location> s;
-        for E in alll edgesFrom(A)y
-              if( E.to ==B)
-
-}
-
-
-}
+class Edge:
+    def __init__(self, src, dst, time, hasSB):
+        """
+        Args:
+            src, dst: source node and destination node
+            time (int): time to walk through this edge
+            hasSB (bool): has StarBucks or not            
+        """
+        self.src = src
+        self.dst = dst
+        self.time = time
+        self.hasSB = hasSB
+        
+def cal_possibility(src, dst, edges, N):
+    """
+    Args:
+        src, dst: source node and destination node
+        edges: a list of Edges
+        N: given time to travel
+    Returns:
+        poss: a float represent possibility of go through paths with SB
+    """
+    #assert(木有环)
+    count_N = 0
+    count_Y = 0
+    # edges
+    
+    def dfs(src, DST, n, buffSB):
+        if n < 0:
+            return
+        if n >= 0 and src == DST:
+            if buffSB:
+                count_Y += 1
+            else:
+                count_N += 1
+            return
+        for edge in edges:
+            if edge.src == src and n >= edge.time:
+                newbuffSB = buffSB | edge.hasSB
+                dfs(edge.dst, DST, n-edge.time, newbuffSB)
+        
+    # cal_possibility
+    buff_SB = False
+    dfs(src, dst, N, [], buff_SB)
+    
+    poss = count_Y / (count_Y + count_N)
+    return poss
+    
 
 // our job is to write edgesFrom()
 // we have a giant file of edge data
